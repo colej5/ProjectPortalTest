@@ -1,0 +1,171 @@
+Screen3 As screen:
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+
+    Container2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        X: =392
+        Y: =92
+        ZIndex: =1
+
+    WeatherForecast_Component_G_1 As WeatherForecast_Component_G:
+        OnClickScreen: =Weather_Screen
+        WeatherCondition: =WeatherForecast.responses.weather.current.cap
+        WeatherHumidity: =WeatherForecast.responses.weather.current.rh
+        WeatherLocation: =varPostcode
+        WeatherTemperature: =WeatherForecast.responses.weather.current.temp
+        X: =100
+        Y: =132
+        ZIndex: =2
+
+    Image1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =325
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: |
+            ="https://dev.virtualearth.net/REST/v1/Imagery/Map/"&
+            ImageryType_Dropdown.Selected.Value &"/"&
+                "54.653471,-2.687955/15?" &  // Coordinates and zoom level
+                "mapSize="&Image1.Width&","&Image1.Height&          // Image size
+                "&key=Aq68j22Y288sW8cMirL06iREJT2sIUGKeYv0vgWv0WPZbHjy48Rznzu42xQaYIPc"       // Replace with your Bing Maps API key
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =1215
+        X: =100
+        Y: =420
+        ZIndex: =3
+
+    ImageryType_Dropdown As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        Default: ="AerialWithLabels"
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Font: =Font.'Segoe UI'
+        Height: =35
+        HoverBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =["Aerial","AerialWithLabels","Road","CanvasDark","CanvasLight","CanvasGray"]
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(164, 38, 44, 1)
+        SelectionFill: =RGBA(164, 38, 44, 1)
+        Size: =13
+        Width: =226
+        X: =1038
+        Y: =313
+        ZIndex: =4
+
+    MapStart_TextInput As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: ="Start Co-ordinates"
+        HoverBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(164, 38, 44, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Width: =226
+        X: =1038
+        Y: =348
+        ZIndex: =5
+
+    MapEnd_TextInput As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: ="End Co-ordinates"
+        HoverBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(164, 38, 44, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Width: =226
+        X: =1038
+        Y: =384
+        ZIndex: =6
+
+    Image1_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =430
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: |-
+            =    
+            //"https://dev.virtualearth.net/REST/v1/Imagery/Map/Imagery/"& ImageryType_Dropdown.Selected.Value &"/Routes/Driving?waypoint.1=54.651185, -2.636754"&"&"&
+            //"waypoint.2=54.655264, -2.715249"&"&"&
+            //"pushpin={pushpin}"&
+            //"timeType={timeType}"&
+            //"dateTime={dateTime}"&"maxSolutions={maxSolutions}"&
+            //"distanceBeforeFirstTurn=500"&"&"&
+            //"mapLayer=OrdnanceSurvey"&"&"&
+            //"format={format}"&
+            //"mapMetadata={mapMetadata}" &
+            
+            "https://dev.virtualearth.net/REST/v1/Imagery/Map/"& ImageryType_Dropdown.Selected.Value &"/Routes?" &
+                "waypoint.1=54.651185,-2.636754
+                &waypoint.2=54.655264,-2.715249/15?" &  // Waypoints and zoom level
+                "mapSize="&Image1_1.Width&","&Image1_1.Height&
+            "&key=Aq68j22Y288sW8cMirL06iREJT2sIUGKeYv0vgWv0WPZbHjy48Rznzu42xQaYIPc"
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =919
+        X: =160
+        Y: =40
+        ZIndex: =7
+

@@ -1,0 +1,99 @@
+Welcome_Screen As screen:
+    Fill: =RGBA(227, 209, 210, 1)
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+    OnVisible: |+
+        =//Update Weather
+        Set(varPostcode,Postcode_Input_Label.Text);
+        Set(WeatherForecast,MSNWeather.CurrentWeather(
+                    varPostcode,"C"  
+                    ));
+        
+        //Collections
+        // Sectors
+        
+        
+
+    Home_Canvas_1 As fluidGrid.fluidGridWithBlankCard:
+        AcceptsFocus: =true
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        Height: =App.Height-Header_Component_G_7.Height
+        Width: =Parent.Width
+        Y: =Header_Component_G_7.Height+If(App.Width<540,10,0)
+        ZIndex: =3
+
+        Home_Main_DataCard_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(227, 209, 210, 1)
+            Height: =If(App.Width<540,App.Height-Header_Component_G_7.Height-Home_Footer_DataCard_1.Height,App.Height-Header_Component_G_7.Height-Home_Footer_DataCard_1.Height)
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            YSWD_Board_1 As YSWD_Board:
+                X: =185
+                YSWD_Board: ='YSWD List'
+                ZIndex: =1
+
+        Home_Footer_DataCard_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =55
+            Width: =App.Width
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Home_Footer_Label_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-Home_Footer_Logo_Icon_1.Width
+                X: =Home_Footer_Logo_Icon_1.X+Home_Footer_Logo_Icon_1.Width
+                Y: =5
+                ZIndex: =1
+
+            Home_Footer_Logo_Icon_1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =2
+
+    Header_Component_G_7 As Header_Component_G:
+        MainHeading: ="Welcome to Test Project Portal"
+        MenuButtonNavTo: =Home_Screen
+        SubHeading: =""
+        Width: =App.Width
+        X: =App.Width/2-Self.Width/2
+        ZIndex: =11
+
+    WeatherForecast_Component_14 As WeatherForecast_Component:
+        X: =App.Width-Self.Width-10
+        Y: =16
+        ZIndex: =12
+

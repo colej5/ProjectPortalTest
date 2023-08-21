@@ -1,0 +1,881 @@
+Office_Induction_Screen As screen:
+    Fill: =RGBA(227, 209, 210, 1)
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+    OnVisible: |-
+        =//Update Weather
+        Set(varPostcode,Postcode_Input_Label.Text);
+        Set(WeatherForecast,MSNWeather.CurrentWeather(
+                    varPostcode,"C"  
+                    ))
+
+    Office_Induction_Canvas As fluidGrid.fluidGridWithBlankCard:
+        AcceptsFocus: =true
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        Height: =App.Height-Header_Component_G_5.Height
+        Width: =Parent.Width
+        Y: =Header_Component_G_5.Y+Header_Component_G_5.Height
+        ZIndex: =3
+
+        Project_Induction_Main_DataCard_2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(227, 209, 210, 1)
+            Height: =If(App.Width<540,App.Height-Header_Component_G_5.Height-Project_Induction_Footer_DataCard_3.Height,App.Height-Header_Component_G_5.Height-Project_Induction_Footer_DataCard_3.Height)
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container6_1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height - Self.Y
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1000
+                X: =App.Width/2-Self.Width/2
+                Y: =10
+                ZIndex: =5
+
+                "TabList2_1 As 'Tab list'.pcfdataset":
+                    Alignment: ='TabList.Alignment'.Vertical
+                    DefaultSelectedItems: =
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height - Self.Y
+                    Items: |-
+                        =[
+                            {Name:"Welcome",Number:1},
+                            {Name:"Parking",Number:2},
+                            {Name:"Kitchen",Number:3},
+                            {Name:"Toilet Facilities",Number:4},
+                            {Name:"Meeting Rooms",Number:5},
+                            {Name:"PPE",Number:6},
+                            {Name:"Fire Alarms",Number:7},
+                            {Name:"First Aiders / Fire Marshall",Number:8},
+                            {Name:"Hospitals",Number:9},
+                            {Name:"First Aid / Defibrillator",Number:10},
+                            {Name:"Phones / Electronic devices",Number:11},
+                            {Name:"Keeping everyone safe",Number:12},
+                            {Name:"Smoking Shelter",Number:13},
+                            {Name:"Office",Number:14},
+                            {Name:"Sign Off",Number:15}
+                        ]
+                    Size: ='TabList.Size'.Medium
+                    Width: =219
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    Number1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Number"
+                        FieldName: ="Number"
+                        FieldType: ="n"
+                        FieldVariantName: ="textualColumn"
+                        Order: =3
+                        ZIndex: =12
+
+                    Name1_1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Name"
+                        FieldName: ="Name"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =2
+                        ZIndex: =13
+
+                Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
+                    BorderThickness: =0
+                    Height: =Parent.Height - Self.Y
+                    Width: =769
+                    X: =230
+                    ZIndex: =2
+
+                    Welcome_DataCard As dataCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =0
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =462
+                        Visible: =TabList2_1.Selected.Name = "Welcome"
+                        Width: =769
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        Label6_9 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Welcome"
+                            Width: =388
+                            X: =4
+                            ZIndex: =1
+
+                        Label7_4 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =200
+                            Size: =13
+                            Text: ="Welcome to M621 J1-7 improvement project office induction.The M621 currently experiences congestion during peak periods, which results in poor journey time reliability. The project aims to maximise traffic capacity on the existing M621 in order to alleviate both the existing and forecast future congestion.Proposed plans will deliver improvements to key junctions on the M621 with free flow links connecting the A643 at junction 2 and additional lane capacity at both junctions 2 and 7. Two sections of discontinuous hard shoulder between junctions 3 and 2 on the westbound (anticlockwise) carriageway and a change of priority of the mainline M621 with the A61 will allow traffic to flow more freely. Additional technology is proposed along the length of the motorway to safely manage traffic in the event of an incident and to keep drivers better informed."
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =755
+                            X: =19
+                            Y: =35
+                            ZIndex: =2
+
+                        Image1_3 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =206
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: |
+                                ="https://dev.virtualearth.net/REST/v1/Imagery/Map/"&
+                                ImageryType_Dropdown.Selected.Value &"/"&
+                                    "53.78568554149265, -1.5226917572501621/15?" &  // Coordinates and zoom level
+                                    "mapSize="&Image1_3.Width&","&Image1_3.Height&          // Image size
+                                    "&key=Aq68j22Y288sW8cMirL06iREJT2sIUGKeYv0vgWv0WPZbHjy48Rznzu42xQaYIPc"       // Replace with your Bing Maps API key
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =706
+                            X: =30
+                            Y: =235
+                            ZIndex: =3
+
+                    Parking_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =487
+                        Visible: =TabList2_1.Selected.Name = "Parking"
+                        Width: =769
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        Label6_10 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Parking"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_11 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="When entering the compound, you must follow the one-way system and when parking your vehicle in the car park please ensure you have reverse parked."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =17
+                            Y: =35
+                            ZIndex: =3
+
+                    Kitchen_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =512
+                        Visible: =TabList2_1.Selected.Name = "Kitchen"
+                        Width: =769
+                        X: =0
+                        Y: =2
+                        ZIndex: =3
+
+                        Label6_11 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Kitchen"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label7_5 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =143
+                            Size: =13
+                            Text: ="As you enter the main site office the kitchen is located on the right past the toilets. Tea / coffee facilities are available."
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =755
+                            X: =14
+                            Y: =40
+                            ZIndex: =3
+
+                    ToiletFacilities_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =513
+                        Visible: =TabList2_1.Selected.Name = "Toilet Facilities"
+                        Width: =769
+                        X: =0
+                        Y: =3
+                        ZIndex: =4
+
+                        Label6_12 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Toilet Facilities"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label7_6 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =159
+                            Size: =13
+                            Text: ="Main site office toilets are situated on the right hand side of the building before the kitchen. There are additional toilets in the welfare cabin as you enter turn right and they are situated on the left side."
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =733
+                            X: =14
+                            Y: =35
+                            ZIndex: =3
+
+                    MeetingRooms_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =386
+                        Visible: =TabList2_1.Selected.Name = "Meeting Rooms"
+                        Width: =769
+                        X: =0
+                        Y: =4
+                        ZIndex: =5
+
+                        Label6_13 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Meeting Rooms"
+                            Width: =388
+                            ZIndex: =1
+
+                        HtmlText2_1 As htmlViewer:
+                            Height: =91
+                            HtmlText: ="We have got 3 meeting rooms (Burrows, Peacock and Sinfield) if you would like to book a room, please speak to Office Manager."
+                            Width: =746
+                            Y: =35
+                            ZIndex: =2
+
+                    PPE_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =315
+                        Visible: =TabList2_1.Selected.Name = "PPE"
+                        Width: =769
+                        X: =0
+                        Y: =5
+                        ZIndex: =6
+
+                        Label6_14 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="PPE"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_12 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="PPE is not to be worn in the office or first section of the car park. PPE is to be worn when entering the top section of the car park where there are vehicle / plant movements. You can access PPE via Office Manager using the PPE form."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =15
+                            Y: =35
+                            ZIndex: =4
+
+                    FireAlarms_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Fire Alarms"
+                        Width: =769
+                        X: =0
+                        Y: =6
+                        ZIndex: =7
+
+                        Label6_15 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Fire Alarms"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_13 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="We have an airhorn situated in the reception main site office and outside welfare cabin to alert people and we will carry out 2 fire drills a year. The muster point is situated centrally by the fence at the far side of the car park. Fire alarm test will be carried out weekly with no need to vacate the premises (Monday 10am)."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =18
+                            Y: =35
+                            ZIndex: =2
+
+                    FirstAidersFireMarshall_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "First Aiders / Fire Marshall"
+                        Width: =769
+                        X: =0
+                        Y: =7
+                        ZIndex: =8
+
+                        Label6_16 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="First Aiders / Fire Marshall"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_14 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="Pictures and contact numbers are on the noticeboard in the main site office, induction room and welfare canteen"
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =24
+                            Y: =35
+                            ZIndex: =2
+
+                    Hospitals_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Hospitals"
+                        Width: =769
+                        X: =0
+                        Y: =8
+                        ZIndex: =9
+
+                        Label6_17 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Hospitals"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_15 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="Details of the nearest hospital are on the noticeboard in the main office, induction room and welfare canteen."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =23
+                            Y: =35
+                            ZIndex: =2
+
+                    FirstAidDefrillator_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "First Aid / Defibrillator"
+                        Width: =769
+                        X: =0
+                        Y: =9
+                        ZIndex: =10
+
+                        Label6_18 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="First Aid / Defibrillator"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_16 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="First aid room is situated in the ladies drying room. First aid boxes are in the kitchens (main office / welfare). Defibrillator is situated in the main office (signing in area)."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =18
+                            Y: =35
+                            ZIndex: =2
+
+                    PhonesElectronicDevices_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Phones / Electronic devices"
+                        Width: =769
+                        X: =0
+                        Y: =10
+                        ZIndex: =11
+
+                        Label6_19 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Phones / Electronic Devices"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_17 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="Can be used within the office area only or if outside in the compound.Please adhere to the mobile designated usage area which is within the boundary fence."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =19
+                            Y: =35
+                            ZIndex: =2
+
+                    KeepingEveryoneSafe_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Keeping everyone safe"
+                        Width: =769
+                        X: =0
+                        Y: =11
+                        ZIndex: =12
+
+                        Label6_20 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Keeping everyone safe"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_18 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="Everyone has a responsibility to themselves and their colleagues to work safely. If you see any unsafe acts, please report them to site management. Any safety observations please submit contributions of what you have seen and what you done to action it."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =24
+                            Y: =35
+                            ZIndex: =2
+
+                    SmokingShelter_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Smoking Shelter"
+                        Width: =769
+                        X: =0
+                        Y: =12
+                        ZIndex: =13
+
+                        Label6_21 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Smoking Shelter"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_19 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="The smoking area is situated outside at the top car park within the boundary fence."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =19
+                            Y: =35
+                            ZIndex: =2
+
+                    Office_DataCard As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Office"
+                        Width: =769
+                        X: =0
+                        Y: =13
+                        ZIndex: =14
+
+                        Label6_22 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Office"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8_20 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =148
+                            Size: =13
+                            Text: ="If you have any issues / questions please speak with the office manager Jayne Richardson."
+                            Tooltip: ="Email Address"
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =731
+                            X: =20
+                            Y: =35
+                            ZIndex: =2
+
+                    DataCard15 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2_1.Selected.Name = "Sign Off"
+                        Width: =769
+                        X: =0
+                        Y: =14
+                        ZIndex: =15
+
+                Rectangle3_1 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(164, 38, 44, 1)
+                    FocusedBorderThickness: =4
+                    Height: =Parent.Height - Self.Y
+                    HoverFill: =RGBA(164, 38, 44, 1)
+                    PressedFill: =RGBA(164, 38, 44, 1)
+                    Width: =5
+                    X: =TabList2_1.X+TabList2_1.Width
+                    ZIndex: =3
+
+        Project_Induction_Footer_DataCard_3 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =55
+            Width: =App.Width
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            ACC_Induction_Footer_Label_5 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-ACC_Induction_Footer_Logo_Icon_5.Width
+                X: =ACC_Induction_Footer_Logo_Icon_5.X+ACC_Induction_Footer_Logo_Icon_5.Width
+                Y: =5
+                ZIndex: =1
+
+            Project_Induction_Footer_Label_3 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-Project_Induction_Footer_Logo_Icon_3.Width
+                X: =Project_Induction_Footer_Logo_Icon_3.X+Project_Induction_Footer_Logo_Icon_3.Width
+                Y: =5
+                ZIndex: =2
+
+            ACC_Induction_Footer_Logo_Icon_5 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =2
+
+            Project_Induction_Footer_Logo_Icon_3 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =3
+
+    Header_Component_G_5 As Header_Component_G:
+        MainHeading: ="Test Project Portal"
+        MenuButtonNavTo: =Home_Screen
+        SubHeading: ="Office Induction"
+        Width: =App.Width
+        X: =App.Width/2-Self.Width/2
+        ZIndex: =11
+
+    WeatherForecast_Component_11 As WeatherForecast_Component:
+        X: =App.Width-Self.Width-10
+        Y: =16
+        ZIndex: =12
+

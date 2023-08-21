@@ -1,0 +1,98 @@
+ACC_Induction_Screen As screen:
+    Fill: =RGBA(227, 209, 210, 1)
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+    OnVisible: |-
+        =//Update Weather
+        Set(varPostcode,Postcode_Input_Label.Text);
+        Set(WeatherForecast,MSNWeather.CurrentWeather(
+                    varPostcode,"C"  
+                    ));
+        
+        //Form Reset
+        NewForm(ACC_Induction_Form);
+
+    ACC_Induction_Canvas As fluidGrid.fluidGridWithBlankCard:
+        AcceptsFocus: =true
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        Height: =App.Height-Header_Component_G_1.Height
+        Width: =Parent.Width
+        Y: =Header_Component_G_1.Y+Header_Component_G_1.Height
+        ZIndex: =3
+
+        ACC_Induction_Main_DataCard As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(227, 209, 210, 1)
+            Height: =If(App.Width<540,App.Height-Header_Component_G_1.Height,App.Height-Header_Component_G_1.Height-ACC_Induction_Footer_DataCard.Height)
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            ACCInduction_Component_1 As ACCInduction_Component:
+                Height: =If(App.Width<540,App.Height-Header_Component_G_1.Height,App.Height-Header_Component_G_1.Height-ACC_Access_Footer_DataCard.Height)
+                X: =App.Width/2-Self.Width/2
+                ZIndex: =3
+
+        ACC_Induction_Footer_DataCard As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =55
+            Visible: =If(App.Width<540,false,true)
+            Width: =App.Width
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            ACC_Induction_Footer_Label_3 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-ACC_Induction_Footer_Logo_Icon_3.Width
+                X: =ACC_Induction_Footer_Logo_Icon_3.X+ACC_Induction_Footer_Logo_Icon_3.Width
+                Y: =5
+                ZIndex: =1
+
+            ACC_Induction_Footer_Logo_Icon_3 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =2
+
+    Header_Component_G_1 As Header_Component_G:
+        MainHeading: ="Test Project Portal"
+        MenuButtonNavTo: =Home_Screen
+        SubHeading: ="ACC Induction"
+        Width: =App.Width
+        X: =App.Width/2-Self.Width/2
+        ZIndex: =11
+
+    WeatherForecast_Component_7 As WeatherForecast_Component:
+        X: =App.Width-Self.Width-10
+        Y: =16
+        ZIndex: =12
+

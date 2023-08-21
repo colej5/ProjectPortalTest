@@ -1,0 +1,501 @@
+HomeButtonMenu_9Grid_Component As CanvasComponent:
+    Button1_Action: ="Text"
+    Button1_Screen: =App.ActiveScreen
+    Button1_Text: ="Button 1"
+    Button2_Screen: =App.ActiveScreen
+    Button2_Text: ="Button 2"
+    Button3_Screen: =App.ActiveScreen
+    Button3_Text: ="Button 3"
+    Button4_Screen: =App.ActiveScreen
+    Button4_Text: ="Button 4"
+    Button5_Screen: =App.ActiveScreen
+    Button5_Text: ="Button 5"
+    Button6_Screen: =App.ActiveScreen
+    Button6_Text: ="Button 6"
+    Button7_Screen: =App.ActiveScreen
+    Button7_Text: ="Button 7"
+    Button8_Screen: =App.ActiveScreen
+    Button8_Text: ="Button 8"
+    Button9_Screen: =App.ActiveScreen
+    Button9_Text: ="Button 9"
+    ButtonSize: =275
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: |-
+        =If(
+            App.Width<540,
+                Switch(HomeButtonMenu_9Grid_Component.NumberOfButtons,
+                    1,275,
+                    2,500,
+                    3,725,
+                    4,950,
+                    5,1175,
+                    6,1400,
+                    7,1625,
+                    8,1850,
+                    9,2075
+                ),
+        If(
+            Or(HomeButtonMenu_9Grid_Component.NumberOfButtons=1,HomeButtonMenu_9Grid_Component.NumberOfButtons=2,HomeButtonMenu_9Grid_Component.NumberOfButtons=3),
+                275,
+            If(
+            Or(HomeButtonMenu_9Grid_Component.NumberOfButtons=4,HomeButtonMenu_9Grid_Component.NumberOfButtons=5,HomeButtonMenu_9Grid_Component.NumberOfButtons=6),
+                500,
+                If(
+            Or(HomeButtonMenu_9Grid_Component.NumberOfButtons=7,HomeButtonMenu_9Grid_Component.NumberOfButtons=8,HomeButtonMenu_9Grid_Component.NumberOfButtons=9),
+                725))))
+    ItemColourSet: |-
+        =//[RGBA(49, 130, 93, 1),RGBA(235, 0, 0, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+        
+        Table(
+            {background:"#2771c2"},{background:"#db1614"},{background:"#008b3e"},
+            {background:"#2771c2"},{background:"#db1614"},{background:"#008b3e"},
+            {background:"#2771c2"},{background:"#db1614"},{background:"#008b3e"}
+            )
+    NoButtonCols: =100
+    NoButtonRows: =100
+    NumberOfButtons: =6
+    Width: =900
+    X: =0
+    Y: =0
+    ZIndex: =2
+
+    Home_SubmitRequest_Container_9 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: |-
+            =If(Or(
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 2,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 3,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 4,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 5,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 6,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 7,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 8
+                )
+                , false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2+225
+            ))))
+        Y: =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*8,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*2)
+        ZIndex: =1
+
+        Button1_8 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,9).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_9.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button9_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_9.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button9_Text
+            Width: =Home_SubmitRequest_Container_9.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_8 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: |-
+            =If(Or(
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 2,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 3,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 4,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 5,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 6,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 7
+                )
+                , false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2+110,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2
+            ))))
+        Y: |-
+            =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*7,
+            HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*2)
+        ZIndex: =2
+
+        Button1_9 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,8).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_8.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button8_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_8.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button8_Text
+            Width: =Home_SubmitRequest_Container_8.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_7 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: |-
+            =If(Or(
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 2,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 3,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 4,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 5,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 6
+                )
+                , false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2-110,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2-225
+            ))))
+        Y: =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*6,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*2)
+        ZIndex: =3
+
+        Button1_10 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,7).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_7.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button7_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_7.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button7_Text
+            Width: =Home_SubmitRequest_Container_7.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_6 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: |-
+            =If(Or(
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 2,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 3,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 4,
+                HomeButtonMenu_9Grid_Component.NumberOfButtons = 5
+                )
+                , false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2+225
+            ))))
+        Y: =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*5,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component.ButtonSize-50)
+        ZIndex: =4
+
+        Button1_5 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,6).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_6.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button6_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_6.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button6_Text
+            Width: =Home_SubmitRequest_Container_6.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_5 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: =If(Or(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component.NumberOfButtons = 2,HomeButtonMenu_9Grid_Component.NumberOfButtons = 3,HomeButtonMenu_9Grid_Component.NumberOfButtons = 4), false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 5, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2+110,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 6, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2
+            ))))
+        Y: =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*4,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component.ButtonSize-50)
+        ZIndex: =5
+
+        Button1_6 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,5).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_5.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button5_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_5.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button5_Text
+            Width: =Home_SubmitRequest_Container_5.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_4 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: =If(Or(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component.NumberOfButtons = 2,HomeButtonMenu_9Grid_Component.NumberOfButtons = 3), false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 5, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2-110,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 6, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2-225
+            ))))
+        Y: |-
+            =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*3,
+            HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component.ButtonSize-50)
+        ZIndex: =6
+
+        Button1_7 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,4).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_4.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button4_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_4.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button4_Text
+            Width: =Home_SubmitRequest_Container_4.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: =If(Or(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component.NumberOfButtons = 2), false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2+225
+            ))))
+        Y: |-
+            =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*2,
+            HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2)
+        ZIndex: =7
+
+        Button1_4 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,3).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_3.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button3_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_3.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button3_Text
+            Width: =Home_SubmitRequest_Container_3.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_2 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Visible: =If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1, false,true)
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2+110,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2
+            ))))
+        Y: =If(App.Width<540,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component.ButtonSize-50)*1,HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2)
+        ZIndex: =8
+
+        Button1_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,2).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_2.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: =Navigate(HomeButtonMenu_9Grid_Component.Button2_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_2.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button2_Text
+            Width: =Home_SubmitRequest_Container_2.Width
+            ZIndex: =1
+
+    Home_SubmitRequest_Container_1 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Semibold
+        Height: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        RadiusBottomLeft: =25
+        RadiusBottomRight: =25
+        RadiusTopLeft: =25
+        RadiusTopRight: =25
+        Width: =HomeButtonMenu_9Grid_Component.ButtonSize-HomeButtonMenu_9Grid_Component.ButtonSize*0.3
+        X: |-
+            =If(HomeButtonMenu_9Grid_Component.Width<540,HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2-110,
+            If(HomeButtonMenu_9Grid_Component.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component.Width/2-Self.Width/2-225
+            ))))
+        Y: =HomeButtonMenu_9Grid_Component.ButtonSize/2-Self.Height/2
+        ZIndex: =9
+
+        Button1_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =ColorValue(Index(HomeButtonMenu_9Grid_Component.ItemColourSet,1).background)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =Home_SubmitRequest_Container_1.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Self.Fill, -20%)
+            OnSelect: |
+                =Navigate(HomeButtonMenu_9Grid_Component.Button1_Screen,ScreenTransition.Fade);
+            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(Self.Fill, -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =Home_SubmitRequest_Container_1.RadiusBottomLeft
+            RadiusTopRight: =0
+            Size: =25
+            Text: =HomeButtonMenu_9Grid_Component.Button1_Text
+            Width: =Home_SubmitRequest_Container_1.Width
+            ZIndex: =1
+

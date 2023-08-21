@@ -1,0 +1,899 @@
+Project_Induction_Screen As screen:
+    Fill: =RGBA(227, 209, 210, 1)
+    LoadingSpinner: =LoadingSpinner.Controls
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+    OnVisible: |
+        =//Update Weather
+        Set(varPostcode,Postcode_Input_Label.Text);
+        Set(WeatherForecast,MSNWeather.CurrentWeather(
+                    varPostcode,"C"  
+                    ));
+
+    Project_Induction_Canvas As fluidGrid.fluidGridWithBlankCard:
+        AcceptsFocus: =true
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        Height: =App.Height-Header_Component_G_4.Height
+        Width: =Parent.Width
+        Y: =Header_Component_G_4.Y+Header_Component_G_4.Height
+        ZIndex: =3
+
+        Project_Induction_Main_DataCard As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(227, 209, 210, 1)
+            Height: =If(App.Width<540,App.Height-Header_Component_G_4.Height-Project_Induction_Footer_DataCard_1.Height,App.Height-Header_Component_G_4.Height-Project_Induction_Footer_DataCard_1.Height)
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container6 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height - Self.Y
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1000
+                X: =App.Width/2-Self.Width/2
+                Y: =10
+                ZIndex: =5
+
+                "TabList2 As 'Tab list'.pcfdataset":
+                    Alignment: ='TabList.Alignment'.Vertical
+                    DefaultSelectedItems: =
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height - Self.Y
+                    Items: |-
+                        =//[{Name:"Project Overview",Number:1},
+                           // {Name:"Key Contacts",Number:2},
+                          //  {Name:"Team Structure",Number:3},
+                          //  {Name:"Project Site Information",Number:4},
+                          //  {Name:"Safety Procedures",Number:5},
+                          //  {Name:"Project Timeline",Number:6},
+                          //  {Name:"Roles and Responsibilities",Number:7},
+                          //  {Name:"Tools and Technology",Number:8},
+                          //  {Name:"Communication Channels",Number:9},
+                          //  {Name:"Sign Off",Number:10}]
+                        
+                        ["Project Overview",
+                        "Key Contacts",
+                        "Team Structure",
+                        "Project Site Information",
+                        "Safety Procedures",
+                        "Project Timeline",
+                        "Roles and Responsibilities",
+                        "Tools and Technology",
+                        "Communication Channels",
+                        "Sign Off"]
+                    Size: ='TabList.Size'.Large
+                    Width: =219
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    Value1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Value"
+                        FieldName: ="Value"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =3
+                        ZIndex: =14
+
+                Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+                    BorderThickness: =0
+                    Height: =Parent.Height - Self.Y
+                    Width: =769
+                    X: =230
+                    ZIndex: =2
+
+                    DataCard1_1 As dataCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =0
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Parent.Height - 100
+                        Visible: =TabList2.Selected.Value = "Project Overview"
+                        Width: =769
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        Label6 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Project Overview"
+                            Width: =388
+                            X: =4
+                            ZIndex: =1
+
+                        Label7 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =143
+                            Size: =13
+                            Text: ="Short summary of the project scope Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum sit amet nisl sed dapibus. Mauris rutrum leo vel dolor accumsan, sed gravida est finibus. Donec eu tortor mi. Donec vel felis pellentesque, rutrum magna vitae, consequat arcu. Ut porta ipsum id augue maximus, quis egestas nibh laoreet. Aliquam sed vestibulum erat, dapibus blandit leo. Phasellus feugiat nibh auctor, maximus erat auctor, fringilla lorem. Aenean sed lacinia risus."
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =755
+                            X: =19
+                            Y: =35
+                            ZIndex: =2
+
+                        Image1_2 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =206
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: |
+                                ="https://dev.virtualearth.net/REST/v1/Imagery/Map/"&
+                                ImageryType_Dropdown.Selected.Value &"/"&
+                                    "54.653471,-2.687955/13?" &  // Coordinates and zoom level
+                                    "mapSize="&Image1_2.Width&","&Image1_2.Height&          // Image size
+                                    "&key=Aq68j22Y288sW8cMirL06iREJT2sIUGKeYv0vgWv0WPZbHjy48Rznzu42xQaYIPc"       // Replace with your Bing Maps API key
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =706
+                            X: =31
+                            Y: =178
+                            ZIndex: =3
+
+                    DataCard2 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =487
+                        Visible: =TabList2.Selected.Value = "Key Contacts"
+                        Width: =769
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        Label6_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Key Contacts"
+                            Width: =388
+                            ZIndex: =1
+
+                        Label8 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="Project Manager"
+                            Width: =170
+                            X: =13
+                            Y: =35
+                            ZIndex: =2
+
+                        Label8_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: ="Project Manager Name"
+                            Tooltip: ="Email Address"
+                            Width: =448
+                            X: =190
+                            Y: =35
+                            ZIndex: =3
+
+                        Label8_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="Design Manager"
+                            Width: =170
+                            X: =13
+                            Y: =75
+                            ZIndex: =4
+
+                        Label8_3 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: ="Design Manager Name"
+                            Tooltip: ="Email Address"
+                            Width: =448
+                            X: =190
+                            Y: =75
+                            ZIndex: =5
+
+                        Label8_4 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="Informtion Manager"
+                            Width: =171
+                            X: =13
+                            Y: =115
+                            ZIndex: =6
+
+                        Label8_5 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: ="Informtion Manager Name"
+                            Tooltip: ="Email Address"
+                            Width: =448
+                            X: =190
+                            Y: =115
+                            ZIndex: =7
+
+                        Label8_6 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="Document Controller"
+                            Width: =177
+                            X: =13
+                            Y: =155
+                            ZIndex: =8
+
+                        Label8_7 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: ="Document Controller Name"
+                            Tooltip: ="Email Address"
+                            Width: =448
+                            X: =190
+                            Y: =155
+                            ZIndex: =9
+
+                        Label8_8 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="Quality Manager"
+                            Width: =177
+                            X: =13
+                            Y: =195
+                            ZIndex: =10
+
+                        Label8_9 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Size: =13
+                            Text: ="Quality Manager Name"
+                            Tooltip: ="Email Address"
+                            Width: =448
+                            X: =190
+                            Y: =195
+                            ZIndex: =11
+
+                    DataCard3 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =512
+                        Visible: =TabList2.Selected.Value = "Team Structure"
+                        Width: =769
+                        X: =0
+                        Y: =2
+                        ZIndex: =3
+
+                        Label6_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Team Structure"
+                            Width: =388
+                            ZIndex: =1
+
+                        Image2 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =325
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: ='Example Team Structure'
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =617
+                            X: =71
+                            Y: =183
+                            ZIndex: =2
+
+                        Label7_1 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =143
+                            Size: =13
+                            Text: ="Short summary of the project scope Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum sit amet nisl sed dapibus. Mauris rutrum leo vel dolor accumsan, sed gravida est finibus. Donec eu tortor mi. Donec vel felis pellentesque, rutrum magna vitae, consequat arcu. Ut porta ipsum id augue maximus, quis egestas nibh laoreet. Aliquam sed vestibulum erat, dapibus blandit leo. Phasellus feugiat nibh auctor, maximus erat auctor, fringilla lorem. Aenean sed lacinia risus."
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =755
+                            X: =14
+                            Y: =40
+                            ZIndex: =3
+
+                    DataCard4 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =513
+                        Visible: =TabList2.Selected.Value = "Project Site Information"
+                        Width: =769
+                        X: =0
+                        Y: =3
+                        ZIndex: =4
+
+                        Label6_3 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Project Site Information"
+                            Width: =388
+                            ZIndex: =1
+
+                        Image3 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =278
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: ='Example Site Compound Map'
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =431
+                            X: =312
+                            Y: =60
+                            ZIndex: =2
+
+                        Label7_2 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =414
+                            Size: =13
+                            Text: ="Project Site Info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum sit amet nisl sed dapibus. Mauris rutrum leo vel dolor accumsan, sed gravida est finibus. Donec eu tortor mi. Donec vel felis pellentesque, rutrum magna vitae, consequat arcu. Ut porta ipsum id augue maximus, quis egestas nibh laoreet. Aliquam sed vestibulum erat, dapibus blandit leo. Phasellus feugiat nibh auctor, maximus erat auctor, fringilla lorem. Aenean sed lacinia risus."
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =281
+                            X: =14
+                            Y: =60
+                            ZIndex: =3
+
+                    DataCard5 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =1152
+                        Visible: =TabList2.Selected.Value = "Safety Procedures"
+                        Width: =769
+                        X: =0
+                        Y: =4
+                        ZIndex: =5
+
+                        Label6_4 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Safety Procedures"
+                            Width: =388
+                            ZIndex: =1
+
+                        HtmlText2 As htmlViewer:
+                            Height: =1117
+                            HtmlText: |-
+                                ="<ol>
+                                <li><b>Personal Protective Equipment (PPE):</b><br>
+                                All personnel entering the construction site must wear appropriate PPE, including hard hats, high-visibility vests, safety glasses, gloves, and steel-toed boots.</li>
+                                
+                                <li><b>Access Control:</b><br>
+                                Access to the construction site is restricted to authorized personnel only. Visitors and contractors must sign in and receive proper site orientation before entering.</li>
+                                
+                                <li><b>Site Orientation:</b><br>
+                                All new personnel must undergo a comprehensive site orientation, which includes information about site layout, emergency exits, evacuation procedures, and potential hazards.</li>
+                                
+                                <li><b>Hazard Identification and Reporting:</b><br>
+                                Everyone on site is responsible for identifying and reporting hazards immediately. Hazardous conditions, near misses, and incidents should be reported to supervisors or designated safety personnel.</li>
+                                
+                                <li><b>Emergency Procedures:</b><br>
+                                Clear emergency evacuation plans and assembly points should be communicated to all personnel. Regular drills should be conducted to ensure everyone is familiar with the procedures.</li>
+                                
+                                <li><b>Fire Safety:</b><br>
+                                Fire extinguishers should be accessible and regularly inspected. Flammable materials must be stored and handled according to safety regulations. Smoking is prohibited in designated non-smoking areas.</li>
+                                
+                                <li><b>Fall Protection:</b><br>
+                                Any work performed at heights should follow fall protection guidelines. Proper scaffolding, guardrails, and personal fall arrest systems must be used as required.</li>
+                                
+                                <li><b>Electrical Safety:</b><br>
+                                Only qualified personnel should handle electrical equipment. All electrical installations and tools must be regularly inspected for safety compliance.</li>
+                                
+                                <li><b>Heavy Equipment Operation:</b><br>
+                                Proper training and certification are required for operating heavy machinery and equipment. Equipment must be inspected before each use, and operators should follow safe operating practices.</li>
+                                
+                                <li><b>Excavation and Trenching:</b><br>
+                                Excavations deeper than a specified depth must have proper protective systems in place, such as shoring or trench boxes. Regular inspections of excavations are essential.</li>
+                                
+                                <li><b>Material Handling:</b><br>
+                                Proper lifting techniques and equipment (cranes, forklifts, etc.) must be used for material handling. Loads should be secure, and personnel should maintain a safe distance during lifting operations.</li>
+                                
+                                <li><b>Personal Hygiene:</b><br>
+                                Adequate washing facilities should be provided for personnel to maintain proper hygiene. Workers should wash their hands before eating or drinking and after handling hazardous materials.</li>
+                                
+                                <li><b>Hazardous Materials:</b><br>
+                                Handling, storage, and disposal of hazardous materials must adhere to regulatory guidelines. Material Safety Data Sheets (MSDS) should be available for all hazardous substances.</li>
+                                
+                                <li><b>First Aid and Medical Care:</b><br>
+                                First aid kits should be readily accessible, and designated personnel should be trained in first aid. Adequate medical facilities or services should be available nearby.</li>
+                                
+                                <li><b>Safety Training:</b><br>
+                                All personnel should undergo regular safety training sessions to stay updated on safety procedures, regulations, and best practices.</li>
+                                </ol>
+                                
+                                Remember, safety is a top priority on any construction site. These procedures are just a starting point and should be customized based on the specific risks and requirements of your project. Regular communication, training, and monitoring are crucial to maintaining a safe work environment."
+                            Width: =746
+                            Y: =35
+                            ZIndex: =2
+
+                    DataCard6 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =524
+                        Visible: =TabList2.Selected.Value = "Project Timeline"
+                        Width: =769
+                        X: =0
+                        Y: =5
+                        ZIndex: =6
+
+                        Label6_5 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Project Timeline"
+                            Width: =388
+                            ZIndex: =1
+
+                        Image4 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =372
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: ='Example Project Timeline'
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Width: =561
+                            X: =80
+                            Y: =120
+                            ZIndex: =2
+
+                        Label7_3 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =112
+                            Size: =13
+                            Text: ="Project Site Info Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum sit amet nisl sed dapibus. Mauris rutrum leo vel dolor accumsan, sed gravida est finibus. Donec eu tortor mi. Donec vel felis pellentesque, rutrum magna vitae, consequat arcu. "
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =709
+                            X: =40
+                            Y: =40
+                            ZIndex: =3
+
+                    DataCard7 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2.Selected.Value = "Roles and Responsibilities"
+                        Width: =769
+                        X: =0
+                        Y: =6
+                        ZIndex: =7
+
+                        Label6_6 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Roles and Responsibilities"
+                            Width: =388
+                            ZIndex: =1
+
+                    DataCard8 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2.Selected.Value = "Tools and Technology"
+                        Width: =769
+                        X: =0
+                        Y: =7
+                        ZIndex: =8
+
+                        Label6_7 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Tools and Technology"
+                            Width: =388
+                            ZIndex: =1
+
+                    DataCard9 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =100
+                        Visible: =TabList2.Selected.Value = "Communication Channels"
+                        Width: =769
+                        X: =0
+                        Y: =8
+                        ZIndex: =9
+
+                        Label6_8 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Communication Channels"
+                            Width: =388
+                            ZIndex: =1
+
+                    DataCard10 As dataCard.blankCard:
+                        BorderColor: =RGBA(0, 0, 0, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =338
+                        Visible: =TabList2.Selected.Value = "Sign Off"
+                        Width: =769
+                        X: =0
+                        Y: =9
+                        ZIndex: =10
+
+                        Label6_23 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            Size: =16
+                            Text: ="Project Induction Sign off"
+                            Width: =388
+                            ZIndex: =1
+
+                        Button1 As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(164, 38, 44, 1)
+                            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =73
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -10%)
+                            PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =15
+                            Text: ="Click here to complete induction"
+                            Width: =230
+                            X: =260
+                            Y: =140
+                            ZIndex: =2
+
+                        Label7_7 As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(51, 51, 51, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =112
+                            Size: =13
+                            Text: ="Please click the button below to confirm you have completed the induction "
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =709
+                            X: =31
+                            Y: =35
+                            ZIndex: =3
+
+                Rectangle3 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(164, 38, 44, 1)
+                    FocusedBorderThickness: =4
+                    Height: =Parent.Height - Self.Y
+                    HoverFill: =RGBA(164, 38, 44, 1)
+                    PressedFill: =RGBA(164, 38, 44, 1)
+                    Width: =5
+                    X: =TabList2.X+TabList2.Width
+                    ZIndex: =3
+
+        Project_Induction_Footer_DataCard_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =55
+            Width: =App.Width
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            ACC_Induction_Footer_Label_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-ACC_Induction_Footer_Logo_Icon_1.Width
+                X: =ACC_Induction_Footer_Logo_Icon_1.X+ACC_Induction_Footer_Logo_Icon_1.Width
+                Y: =5
+                ZIndex: =1
+
+            Project_Induction_Footer_Label As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-Project_Induction_Footer_Logo_Icon.Width
+                X: =Project_Induction_Footer_Logo_Icon.X+Project_Induction_Footer_Logo_Icon.Width
+                Y: =5
+                ZIndex: =2
+
+            ACC_Induction_Footer_Logo_Icon_1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =2
+
+            Project_Induction_Footer_Logo_Icon As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =3
+
+    Header_Component_G_4 As Header_Component_G:
+        MainHeading: ="Test Project Portal"
+        MenuButtonNavTo: =Home_Screen
+        SubHeading: ="Project Induction"
+        Width: =App.Width
+        X: =App.Width/2-Self.Width/2
+        ZIndex: =11
+
+    WeatherForecast_Component_10 As WeatherForecast_Component:
+        X: =App.Width-Self.Width-10
+        Y: =16
+        ZIndex: =12
+

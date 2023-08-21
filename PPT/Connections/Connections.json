@@ -1,0 +1,91 @@
+{
+  "5993957e-f88f-4cc6-bbec-83b9b0de7789": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1645/1.0.1645.3345/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "bd2657a6-8485-484c-804f-c8bfd4618233"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "bd2657a6-8485-484c-804f-c8bfd4618233"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "PowerAppDeviceTest"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "5993957e-f88f-4cc6-bbec-83b9b0de7789"
+  },
+  "c8dd38e3-3304-4f0b-8beb-aed330953abe": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "MSN Weather",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1646/1.0.1646.3354/msnweather/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_msnweather",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "MSNWeather"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "c8dd38e3-3304-4f0b-8beb-aed330953abe"
+  },
+  "f349e79c-0aa4-480d-8b65-37829c7851bb": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://keltbray.sharepoint.com/sites/Teams-DigitalDeliveryTeam/PPT": {
+        "dataSources": {
+          "ACC Access": {
+            "tableName": "97302294-bb38-4826-abd4-acda9a5005b8"
+          },
+          "CDE Roles and folder permissions": {
+            "tableName": "bda18a1f-746c-44f0-84b3-df3c2d6931ab"
+          },
+          "Site Team Roles and Responsibilities": {
+            "tableName": "66584208-14d1-4587-8cbb-9efc63523d7a"
+          },
+          "Task Team Approvers": {
+            "tableName": "aff39b68-c322-4ba4-b332-628d339e4cd5"
+          },
+          "Weather Tracking": {
+            "tableName": "6629625c-0a8b-4c68-b224-0df6c4e90429"
+          },
+          "YSWD List": {
+            "tableName": "f6162335-aaac-4fca-9ae9-3f16ac81147e"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Weather Tracking",
+      "Task Team Approvers",
+      "ACC Access",
+      "Site Team Roles and Responsibilities",
+      "CDE Roles and folder permissions",
+      "YSWD List"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f349e79c-0aa4-480d-8b65-37829c7851bb"
+  }
+}

@@ -1,0 +1,244 @@
+ACCInduction_Component As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =800
+    Width: =If(App.Width<540,App.Width,If(App.Width<1200,App.Width,1200))
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container3 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =65
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =If(App.Width<540,App.Width,Parent.Width/2)
+        X: =If(App.Width<540,App.Width/2-Self.Width/2,0)
+        Y: =Parent.Height-Self.Height
+        ZIndex: =9
+
+        TutorialNavigator1_1 As gallery.TutorialGalleryHorizontal:
+            AccessibleLabel: ="Layouts_Tutorial_Gallery_Accessible_Text"
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Height: =55
+            Items: |-
+                =Table(         
+                 {Step: 0, Text:"Autodesk Construction Cloud is a comprehensive construction management platform developed by Autodesk, a leading software company known for its design and engineering solutions. 
+                 
+                 Autodesk Construction Cloud (ACC) is specifically designed to streamline construction workflows, enhance collaboration, and improve project management efficiency throughout the entire construction lifecycle.", Image: 'ACC-TM-full-stacked@3x',Audio:'ACC Induction Step1'},
+                
+                 {Step: 1, Text:"ACC combines various software tools and applications to address different aspects of construction project management. Some key components of Autodesk Construction Cloud include:
+                 
+                 - Document Management
+                 - Design Collaboration
+                 - BIM (Building Information Modeling) Collaboration
+                 - Project Management
+                 - Quality and Safety Management
+                 - Field Collaboration
+                 - Analytics and Reporting", Image: 'ACC Induction Project Homepage',Audio:'ACC Induction Step 2'}, 
+                
+                 {Step: 2, Text:"ACC's naming convention is a standardized approach to naming files and documents within the context of building information modeling (BIM) processes. It is based on the ISO 19650 series of international standards that provide guidance for managing information throughout the lifecycle of construction projects. 
+                 
+                 Here are some reasons why using the ISO 19650 naming convention is important:
+                 
+                 - Consistency and Standardization
+                 - Improved Information Management
+                 - Enhanced Collaboration and Interoperability
+                 - Scalability and Long-term Maintenance
+                 - Compliance with Industry Standards
+                 - Future-proofing and Accessibility", Image: SampleImage,Audio:'ACC Induction Step 3'},
+                          
+                 {Step: 3, Text:"Your tutorial screens start with zero in the formula. Leave it at zero so your tutorial advances correctly.", Image: SampleImage},
+                 {Step: 4, Text:"Your tutorial screens start with zero in the formula. Leave it at zero so your tutorial advances correctly.", Image: SampleImage}         
+                )
+            ShowScrollbar: =false
+            TemplatePadding: =8
+            TemplateSize: =25
+            Width: =CountRows(Self.AllItems) * (Self.TemplateWidth + Self.TemplatePadding) + 5
+            X: =Container3.Width/2-Self.Width/2
+            Y: =5
+            ZIndex: =1
+
+            Circle1_1 As circle:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderThickness: =2
+                DisabledFill: =RGBA(164, 38, 44, 1)
+                Fill: =If(Or(ThisItem.Step = 0 && IsBlank(_guideStep), ThisItem.Step = _guideStep), iconPrev1_1.Color, RGBA(0,0,0,0))
+                FocusedBorderThickness: =4
+                Height: =Circle1_1.Width
+                HoverFill: =RGBA(164, 38, 44, 1)
+                OnSelect: =Set(_guideStep, ThisItem.Step)
+                PressedFill: =RGBA(164, 38, 44, 1)
+                TabIndex: =0
+                Width: =Parent.TemplateWidth - 5
+                X: =Parent.TemplateWidth/2 - Self.Width/2
+                Y: =Parent.TemplateHeight/2 - Self.Height/2
+                ZIndex: =1
+
+        LabelSkip1_1 As label:
+            Align: =Align.Center
+            BorderColor: =Self.Color
+            Color: =RGBA(0, 134, 208, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =2
+            Font: =Font.'Segoe UI'
+            Height: =65
+            OnSelect: =Set(_guideStep, Last(TutorialNavigator1_1.AllItems).Step)
+            Size: =15
+            TabIndex: =0
+            Text: ="Skip"
+            Width: =100
+            X: =If(App.Width<540,Container3.Width-Self.Width,Container3.Width-Self.Width)
+            ZIndex: =2
+
+        Audio1 As audioPlayback:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Fill: =RGBA(164, 38, 44, 1)
+            Media: =If(IsBlank(_guideStep), First(TutorialNavigator1_1.AllItems).Text, LookUp(TutorialNavigator1_1.AllItems, Step = _guideStep).Audio)
+            Tooltip: ="Play audio"
+            Width: =65
+            ZIndex: =3
+
+        iconNext1_1 As icon.ChevronRight:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(164, 38, 44, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =45
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: =Set(_guideStep, Min(_guideStep+1, Last(TutorialNavigator1_1.AllItems).Step))
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="Next step"
+            Visible: =Last(TutorialNavigator1_1.AllItems).Step > _guideStep
+            Width: =40
+            X: =TutorialNavigator1_1.X+TutorialNavigator1_1.Width
+            Y: =10
+            ZIndex: =4
+
+        iconPrev1_1 As icon.ChevronLeft:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Color: =RGBA(164, 38, 44, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =45
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Set(_guideStep, Max(_guideStep-1, First(TutorialNavigator1_1.AllItems).Step))
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            TabIndex: =0
+            Tooltip: ="Previous step"
+            Visible: =_guideStep > 0
+            Width: =40
+            X: =TutorialNavigator1_1.X-Self.Width
+            Y: =10
+            ZIndex: =5
+
+    Container4 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Regular
+        Height: =Parent.Height
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =If(App.Width<540,false,true)
+        Width: =Parent.Width / 2
+        X: =If(App.Width<540,Parent.Width/2-Self.Width/2,Parent.Width/2)
+        ZIndex: =10
+
+        RectTextBkg1_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(164, 38, 44, 1), 90%)
+            Height: =Parent.Height
+            Width: =Parent.Width
+            X: =
+            ZIndex: =1
+
+        TutorialImage1_1 As image:
+            AccessibleLabel: ="Layouts_Tutorial_Image_Accessible_Text"
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =Parent.Height
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(IsBlank(_guideStep), First(TutorialNavigator1_1.AllItems).Image, LookUp(TutorialNavigator1_1.AllItems, Step = _guideStep).Image)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =Parent.Width-20
+            X: =Parent.Width/2-Self.Width/2
+            ZIndex: =2
+
+    Gallery1 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =Parent.Height-Container3.Height
+        Items: =If(IsBlank(_guideStep), First(TutorialNavigator1_1.AllItems), LookUp(TutorialNavigator1_1.AllItems, Step = _guideStep))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =
+        Width: =If(App.Width<540,App.Width,Parent.Width/2)
+        X: =If(App.Width<540,App.Width/2-Self.Width/2,0)
+        ZIndex: =11
+
+        Label2 As label:
+            AutoHeight: =true
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =585
+            OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
+            Size: =16
+            Text: =ThisItem.Text
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width-40
+            X: =Parent.Width/2-Self.Width/2
+            Y: =//(Parent.Height-Container3.Height)/2 - Self.Height/2
+            ZIndex: =1
+
+        TutorialImage1_2 As image:
+            AccessibleLabel: ="Layouts_Tutorial_Image_Accessible_Text"
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =300
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =If(IsBlank(_guideStep), First(TutorialNavigator1_1.AllItems).Image, LookUp(TutorialNavigator1_1.AllItems, Step = _guideStep).Image)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(App.Width<540,true,false)
+            Width: =Parent.Width-20
+            X: =Parent.Width/2-Self.Width/2
+            Y: =Label2.Y+Label2.Height+20
+            ZIndex: =2
+

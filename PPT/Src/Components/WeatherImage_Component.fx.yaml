@@ -1,0 +1,42 @@
+WeatherImage_Component As CanvasComponent:
+    ConditionInput: ="Text"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =60
+    Width: =60
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Image3_2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =WeatherImage_Component.Height
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: |+
+            =Switch(Upper(WeatherImage_Component.ConditionInput),
+             "T-STORMS",lightning_thunder_weather_icon,
+             "HEAVY RAIN",'heavy rain_rain_weather_icon',
+             "RAIN SHOWERS",'moderate rain_rain_rainny_weather_icon',
+             "RAIN",'moderate rain_rain_rainny_weather_icon',
+             "LIGHT RAIN",'light rain_rain_rainny_weather_icon',
+             "LIGHT RAIN SHOWERS",'light rain_rain_rainny_weather_icon',
+             "MOSTLY CLOUDY",'cloud_cloudy_partly cloudy_weather_icon',
+             "CLOUDY",cloud_overcast_weather_icon,
+             "PARTLY COULDY",'cloud_cloudy_partly cloudy_weather_icon',
+             "CLOUDY/WIND",weather_wind_windy_icon,
+             "PARTLY SUNNY",'cloud_cloudy_partly cloudy_weather_icon',
+             "SUNNY",sun_sunny_weather_icon,
+             "MOSTLY SUNNY",sun_sunny_weather_icon
+             )
+            
+        OnSelect: =Navigate(Weather_Screen,ScreenTransition.Fade);
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =WeatherImage_Component.Width
+        ZIndex: =1
+

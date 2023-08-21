@@ -1,0 +1,315 @@
+ProjectResources_Screen As screen:
+    Fill: =RGBA(227, 209, 210, 1)
+    LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
+    OnVisible: |
+        =//Update Weather
+        Set(varPostcode,Postcode_Input_Label.Text);
+        Set(WeatherForecast,MSNWeather.CurrentWeather(
+                    varPostcode,"C"  
+                    ));
+        
+        //Collections
+        // Sectors
+        ClearCollect(colACCSectors,
+                        {Sector:"Infrastructure",Code:"INF"},
+                        {Sector:"Built Environment",Code:"BEV"}
+        );
+        // Markets
+        ClearCollect(colACCMarket,
+                        {Sector:"Infrastructure",Market:"Highways",Code:"HWY"},
+                        {Sector:"Infrastructure",Market:"Rail",Code:"RAL"},
+                        {Sector:"Infrastructure",Market:"Energy",Code:"EGY"},
+                        {Sector:"Built Environment",Market:"Demo & Civils",Code:"DNC"},
+                        {Sector:"Built Environment",Market:"Env Services",Code:"ESV"},
+                        {Sector:"Built Environment",Market:"Piling",Code:"PLG"},
+                        {Sector:"Built Environment",Market:"Structures",Code:"STR"}
+        );
+        // Companies
+        ClearCollect(colACCCompanies,
+                        {Company:"Keltbray",Code:"KEL"},
+                        {Company:"Wentworth House",Code:"WWH"}
+        );
+        // Task Teams
+        ClearCollect(colACCTaskTeams,
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Civil Engineering",TaskTeamCode:"C"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Electrical Engineering",TaskTeamCode:"E"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Earthworks",TaskTeamCode:"EW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"FRC Structures",TaskTeamCode:"FS"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Steelwork and Cladding",TaskTeamCode:"SC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Overhead Lines",TaskTeamCode:"OH"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"HV Substation Installations",TaskTeamCode:"HV"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Cable Tunnels",TaskTeamCode:"CT"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Distribution Networks",TaskTeamCode:"DN"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Steel Erection",TaskTeamCode:"SE"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Information Management",TaskTeamCode:"IM"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Distribution",SubMakertCode:"DTBN",TaskTeam:"Document Control",TaskTeamCode:"DC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Civil Engineering",TaskTeamCode:"C"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Electrical Engineering",TaskTeamCode:"E"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Earthworks",TaskTeamCode:"EW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"FRC Structures",TaskTeamCode:"FS"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Steelwork and Cladding",TaskTeamCode:"SC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Overhead Lines",TaskTeamCode:"OH"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"HV Substation Installations",TaskTeamCode:"HV"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Cable Tunnels",TaskTeamCode:"CT"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Distribution Networks",TaskTeamCode:"DN"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Steel Erection",TaskTeamCode:"SE"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Information Management",TaskTeamCode:"IM"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Renewables",SubMakertCode:"RENW",TaskTeam:"Document Control",TaskTeamCode:"DC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Civil Engineering",TaskTeamCode:"C"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Electrical Engineering",TaskTeamCode:"E"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Earthworks",TaskTeamCode:"EW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"FRC Structures",TaskTeamCode:"FS"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Steelwork and Cladding",TaskTeamCode:"SC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Overhead Lines",TaskTeamCode:"OH"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"HV Substation Installations",TaskTeamCode:"HV"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Cable Tunnels",TaskTeamCode:"CT"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Distribution Networks",TaskTeamCode:"DN"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Steel Erection",TaskTeamCode:"SE"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Information Management",TaskTeamCode:"IM"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Energy",MarketCode:"EGY",SubMakert:"Transmission",SubMakertCode:"TRSN",TaskTeam:"Document Control",TaskTeamCode:"DC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Rail",MarketCode:"RAL",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Electrification",TaskTeamCode:"EL"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Rail",MarketCode:"RAL",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Track",TaskTeamCode:"TR"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Rail",MarketCode:"RAL",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Civils Energy and Power",TaskTeamCode:"CEP"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Rail",MarketCode:"RAL",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Major Projects",TaskTeamCode:"MP"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Rail",MarketCode:"RAL",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Information Management",TaskTeamCode:"IM"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Rail",MarketCode:"RAL",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Document Control",TaskTeamCode:"DC"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Logistics",TaskTeamCode:"LG"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Traffic Management",TaskTeamCode:"TM"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"Framework - 
+                        National Highways M621",SubMakertCode:"FMNH",TaskTeam:"Earthworks",TaskTeamCode:"EW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"Framework - 
+                        National Highways M621",SubMakertCode:"FMNH",TaskTeam:"Roadworks",TaskTeamCode:"RW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"Framework - 
+                        Local Authorities",SubMakertCode:"FMLA",TaskTeam:"Earthworks",TaskTeamCode:"EW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"Framework - 
+                        Local Authorities",SubMakertCode:"FMLA",TaskTeam:"Roadworks",TaskTeamCode:"RW"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Information Management",TaskTeamCode:"IM"},
+                        {Sector:"Infrastructure",SectorCode:"INF",Market:"Highways",MarketCode:"HWY",SubMakert:"n/a",SubMakertCode:" ",TaskTeam:"Document Control",TaskTeamCode:"DC"}
+        );
+        // OCRA
+        ClearCollect(colACCOCRA,
+                        {OCRA:"Originator",Code:"ORIG"},
+                        {OCRA:"Checker",Code:"CHK"},
+                        {OCRA:"Reviewer",Code:"REV"},
+                        {OCRA:"Approver",Code:"APP"}
+        );
+
+    Home_Canvas_2 As fluidGrid.fluidGridWithBlankCard:
+        AcceptsFocus: =true
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderThickness: =0
+        Height: =App.Height-Header_Component_G_8.Height
+        Width: =Parent.Width
+        Y: =Header_Component_G_8.Height+If(App.Width<540,10,0)
+        ZIndex: =3
+
+        Home_Main_DataCard_2 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(227, 209, 210, 1)
+            Height: =If(App.Width<540,App.Height-Header_Component_G_8.Height-Home_Footer_DataCard_2.Height,App.Height-Header_Component_G_8.Height-Home_Footer_DataCard_2.Height)
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Home_Text_Label_2 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =47
+                Size: =16
+                Text: ="Welcome "&User().FullName&", select an option below"
+                Width: |
+                    =App.Width-40
+                X: =App.Width/2-Self.Width/2
+                Y: =12
+                ZIndex: =2
+
+            Home_Container_2 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Height: =Home_ProjectResources_Button_2.Y + Home_ProjectResources_Button_2.Height+25
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =false
+                Width: =App.Width
+                X: =App.Width/2 - Self.Width/2
+                Y: =Home_Text_Label_2.Y + Home_Text_Label_2.Height
+                ZIndex: =3
+
+                Home_ProjectResources_Button_2 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(164, 38, 44, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Font: =Font.'Segoe UI'
+                    Height: =175
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -10%)
+                    OnSelect: |-
+                        =Launch("https://acc.autodesk.eu/docs/files/projects/9a5cd8e7-e759-41a7-817c-d4e7e6ca921a?folderUrn=urn%3Aadsk.wipemea%3Afs.folder%3Aco.drOs6IjZQgSkIjgLx3wYNA&viewModel=detail&moduleId=folders");
+                    PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Size: =25
+                    Text: ="Project Resources"
+                    Width: =238
+                    X: =If(Home_Container_2.Width<540,Home_Container_2.Width/2-Self.Width/2,Home_Container_2.Width-(Home_Container_2.Width/2)-Self.Width/2-0)
+                    Y: =If(App.Width<540,625,225)
+                    ZIndex: =1
+
+                Home_OfficeInduction_Button_2 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(164, 38, 44, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Font: =Font.'Segoe UI'
+                    Height: =175
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -10%)
+                    PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Size: =25
+                    Text: ="Complete Office Induction"
+                    Width: =238
+                    X: =If(Home_Container_2.Width<540,Home_Container_2.Width/2-Self.Width/2,Home_Container_2.Width-(Home_Container_2.Width/2)-Self.Width/2+270)
+                    Y: =If(App.Width<540,425,25)
+                    ZIndex: =2
+
+                Home_ProjectInduction_Button_2 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(164, 38, 44, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Font: =Font.'Segoe UI'
+                    Height: =175
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -10%)
+                    OnSelect: =Navigate(Project_Induction_Screen,ScreenTransition.Fade);
+                    PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Size: =25
+                    Text: ="Complete Project Induction"
+                    Width: =238
+                    X: =If(Home_Container_2.Width<540,Home_Container_2.Width/2-Self.Width/2,Home_Container_2.Width-(Home_Container_2.Width/2)-Self.Width/2-0)
+                    Y: =If(App.Width<540,225,25)
+                    ZIndex: =3
+
+                Home_ACCInduction_Button_2 As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(164, 38, 44, 1)
+                    FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                    Font: =Font.'Segoe UI'
+                    Height: =175
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -10%)
+                    OnSelect: =If(IsBlank(LookUp('ACC Access',Lower(User().Email) in Lower(Email))),Navigate(ACC_Access_Screen,ScreenTransition.Fade),Navigate(ACC_Induction_Screen,ScreenTransition.Fade));
+                    PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+                    RadiusBottomLeft: =20
+                    RadiusBottomRight: =20
+                    RadiusTopLeft: =20
+                    RadiusTopRight: =20
+                    Size: =25
+                    Text: =If(IsBlank(LookUp('ACC Access',Lower(User().Email) in Lower(Email))),"Request ACC Access","Complete ACC Induction")
+                    Width: =238
+                    X: =If(Home_Container_2.Width<540,Home_Container_2.Width/2-Self.Width/2,Home_Container_2.Width-(Home_Container_2.Width/2)-Self.Width/2-270)
+                    Y: =If(App.Width<540,25,25)
+                    ZIndex: =4
+
+        Home_Footer_DataCard_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(54, 176, 75, 1)
+            Height: =55
+            Width: =App.Width
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Home_Footer_Label_2 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Lato Black'
+                FontWeight: =FontWeight.Semibold
+                Size: =16
+                Text: =" Digital Delivery Team"
+                Width: =App.Width-Home_Footer_Logo_Icon_2.Width
+                X: =Home_Footer_Logo_Icon_2.X+Home_Footer_Logo_Icon_2.Width
+                Y: =5
+                ZIndex: =1
+
+            Home_Footer_Logo_Icon_2 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =33
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: ='Keltbray-logo_single'
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =40
+                Y: =8
+                ZIndex: =2
+
+    Header_Component_G_8 As Header_Component_G:
+        MainHeading: ="Test Project Portal"
+        MenuButtonNavTo: =Home_Screen
+        SubHeading: ="Project Resources"
+        Width: =App.Width
+        X: =App.Width/2-Self.Width/2
+        ZIndex: =11
+
+    WeatherForecast_Component_16 As WeatherForecast_Component:
+        X: =App.Width-Self.Width-10
+        Y: =16
+        ZIndex: =12
+

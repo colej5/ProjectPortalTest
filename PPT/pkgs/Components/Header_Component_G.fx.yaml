@@ -1,0 +1,97 @@
+Header_Component_G As CanvasComponent:
+    Fill: =RGBA(255, 255, 255, 1)
+    HeadingHeight: =HtmlText1.Y + ACC_Induction_Header_Rectangle.Height +HtmlText1.Height
+    Height: =If(IsBlank(Self.SubHeading),143,176)
+    MainHeading: ="Main Heading"
+    MenuButtonNavTo: =App.ActiveScreen
+    SubHeading: ="Sub Heading"
+    Width: =1366
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Weather_Header_Title_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Lato Black'
+        Height: =109
+        Size: =30
+        Text: |-
+            ="Test Project Portal
+            Weather Tracking"
+        Visible: =false
+        Width: =Header_Component_G.Width
+        Y: =Weather_Keltbray_Logo_Image_1.Y+Weather_Keltbray_Logo_Image_1.Height+If(App.Width<540,10,0)
+        ZIndex: =1
+
+    Weather_Keltbray_Logo_Image_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =55
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =If(App.Width<540,'Keltbray-logo_single','Keltbray-logo_Black_white-box')
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =If(App.Width<540,55,223)
+        X: =54
+        Y: =16
+        ZIndex: =2
+
+    Menu_Icon As icon.Hamburger:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(116, 116, 116, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Parent.MenuButtonNavTo,ScreenTransition.Fade);
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =39
+        X: =4
+        Y: =7
+        ZIndex: =3
+
+    HtmlText1 As htmlViewer:
+        AutoHeight: =true
+        Height: =108
+        HtmlText: |-
+            =If(IsBlank(Header_Component_G.SubHeading),
+            "<h1 style='font-size:"&If(Parent.Width<540,30,40)&"px; text-align: center; margin:0;'>"&Header_Component_G.MainHeading&"</h1>",
+            
+            "<h1 style='font-size:"&If(Parent.Width<540,30,40)&"px; text-align: center; margin:0;'>"&Header_Component_G.MainHeading&"</h1> 
+            <h2 style='font-size:"&If(Parent.Width<540,18,24)&"px; text-align: center; margin:0;'>"&Header_Component_G.SubHeading&"</h2>"
+            )
+        Width: =Parent.Width
+        Y: =71
+        ZIndex: =4
+
+    ACC_Induction_Header_Rectangle As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =RGBA(39, 113, 194, 1)
+        FocusedBorderThickness: =4
+        Height: =5
+        Width: =Parent.Width
+        Y: =Parent.Y+Parent.Height-Self.Height
+        ZIndex: =5
+

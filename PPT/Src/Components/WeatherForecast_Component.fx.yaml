@@ -1,0 +1,62 @@
+WeatherForecast_Component As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =60
+    Width: =220
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Label5_1 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =60
+        OnSelect: =Navigate(Weather_Screen,ScreenTransition.Fade);
+        Size: =13
+        Text: |-
+            ="T:" & WeatherForecast.responses.weather.current.temp & " " & WeatherForecast.units.temperature&" H:" & WeatherForecast.responses.weather.current.rh & "% 
+            "&WeatherForecast.responses.weather.current.cap&"
+            "&varPostcode
+        Width: =154
+        ZIndex: =1
+
+    Image3_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =60
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: |+
+            =Switch(Upper(WeatherForecast.responses.weather.current.cap),
+             "T-STORMS",lightning_thunder_weather_icon,
+             "HEAVY RAIN",'heavy rain_rain_weather_icon',
+             "RAIN SHOWERS",'moderate rain_rain_rainny_weather_icon',
+             "RAIN",'moderate rain_rain_rainny_weather_icon',
+             "LIGHT RAIN",'light rain_rain_rainny_weather_icon',
+             "LIGHT RAIN SHOWERS",'light rain_rain_rainny_weather_icon',
+             "MOSTLY CLOUDY",'cloud_cloudy_partly cloudy_weather_icon',
+             "CLOUDY",cloud_overcast_weather_icon,
+             "PARTLY COULDY",'cloud_cloudy_partly cloudy_weather_icon',
+             "CLOUDY/WIND",weather_wind_windy_icon,
+             "PARTLY SUNNY",'cloud_cloudy_partly cloudy_weather_icon',
+             "SUNNY",sun_sunny_weather_icon,
+             "MOSTLY SUNNY",sun_sunny_weather_icon
+             )
+            
+        OnSelect: =Navigate(Weather_Screen,ScreenTransition.Fade);
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =57
+        X: =159
+        ZIndex: =2
+
