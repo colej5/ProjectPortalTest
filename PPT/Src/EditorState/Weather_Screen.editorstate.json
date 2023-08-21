@@ -650,7 +650,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Daily_Temperature_LineChart",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -844,7 +844,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Header_Component_G_11",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1016,7 +1016,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%LineChart.ID%",
       "Name": "Hourly_Temperature_LineChart",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1218,7 +1218,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1",
-      "ParentIndex": 0,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2025,7 +2025,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Temp_Hour_or_Day_Toggle",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2255,7 +2255,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Title1",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2469,7 +2469,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Weather_Canvas",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3379,7 +3379,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherForecast_Component_13",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3477,7 +3477,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherImage_Component_1",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3580,7 +3580,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherImage_Component_2",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3683,7 +3683,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherImage_Component_3",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3786,7 +3786,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherImage_Component_4",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3889,7 +3889,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherImage_Component_5",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4015,7 +4015,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "WeatherTracking_Date_Dropdown",
-      "ParentIndex": 1,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -35,12 +35,14 @@ SIteNoticeBoard_Screen As screen:
             Gallery6 As gallery.galleryVertical:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
-                Height: =(Self.TemplateHeight+Self.TemplatePadding+10)*(CountRows(Self.AllItems)/3)
+                Height: =(Self.TemplateHeight+Self.TemplatePadding+5)*(Round(CountRows(Self.AllItems)/3,0))
                 Items: ='Site Notice Board'
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: =Launch(ThisItem.'Link to item');
-                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                TemplateSize: |-
+                    =//If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+                    330
                 Width: |
                     =If(App.Width > 540, App.Width,Parent.Width)
                 WrapCount: =If(App.Width<540,1,3)
@@ -97,7 +99,7 @@ SIteNoticeBoard_Screen As screen:
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Height: =172
+                    Height: =239
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Image: =ThisItem.Thumbnail.Large
