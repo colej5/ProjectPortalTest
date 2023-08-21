@@ -2,14 +2,10 @@ Welcome_Screen As screen:
     Fill: =RGBA(227, 209, 210, 1)
     LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
     OnVisible: |+
-        =//Update Weather
-        Set(varPostcode,Postcode_Input_Label.Text);
-        Set(WeatherForecast,MSNWeather.CurrentWeather(
-                    varPostcode,"C"  
-                    ));
+        =
         
         //Collections
-        // Sectors
+        
         
         
 
@@ -34,10 +30,149 @@ Welcome_Screen As screen:
             Y: =0
             ZIndex: =1
 
-            YSWD_Board_1 As YSWD_Board:
-                X: =185
-                YSWD_Board: ='YSWD List'
+            YSWD_Container As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =559
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =1000
+                X: =175
+                Y: =15
                 ZIndex: =1
+
+                Rectangle2_2 As rectangle:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(219, 219, 219, 1)
+                    Height: =Parent.Height
+                    Width: =Parent.Width/2
+                    ZIndex: =2
+
+                YSWD_KB_Logo As image:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =52
+                    Image: ='Keltbray-logo_Black_white-box'
+                    Width: =292
+                    X: =45
+                    Y: =20
+                    ZIndex: =3
+
+                YS_Title_Label As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Color: =RGBA(0, 121, 187, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.Georgia
+                    Height: =55
+                    Size: =25
+                    Text: ="You said"
+                    Width: =YSWD_Gallery.Width/2
+                    X: =YSWD_Gallery.X
+                    Y: =YSWD_Gallery.Y-Self.Height
+                    ZIndex: =4
+
+                WD_Title_Label As label:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Color: =RGBA(99, 139, 44, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.Georgia
+                    Height: =55
+                    Size: =25
+                    Text: ="We did"
+                    Width: =YSWD_Gallery.Width/2
+                    X: =YSWD_Gallery.Width/2+YSWD_Gallery.X
+                    Y: =YSWD_Gallery.Y-Self.Height
+                    ZIndex: =5
+
+                YSWD_Gallery As gallery.variableTemplateHeightGallery:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DelayItemLoading: =true
+                    Height: =429
+                    Items: ='YSWD List'
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =280
+                    Width: =Parent.Width-40
+                    X: =Parent.Width/2-Self.Width/2
+                    Y: =130
+                    ZIndex: =6
+
+                    Rectangle3_5 As rectangle:
+                        BorderColor: =RGBA(202, 202, 202, 1)
+                        BorderThickness: =3
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Label3_7.Height+20
+                        Width: =(Parent.Width/2)-40
+                        X: =(Parent.Width/2)+20
+                        ZIndex: =1
+
+                    Rectangle3_4 As rectangle:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =3
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =Label3_6.Height+20
+                        Width: =Parent.Width/2-Parent.X/2-20
+                        X: =1
+                        ZIndex: =2
+
+                    Label3_6 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(0, 121, 187, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Height: =70
+                        OnSelect: =Select(Parent)
+                        Size: =16
+                        Text: =ThisItem.'You Said'
+                        Width: =(Parent.Width/2)-80
+                        X: =40
+                        Y: =10
+                        ZIndex: =3
+
+                    Label3_7 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(127, 178, 57, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Height: =70
+                        OnSelect: =Select(Parent)
+                        Size: =16
+                        Text: =ThisItem.'We Did'
+                        Width: =(Parent.Width/2)-40
+                        X: =(Parent.Width/2)+20
+                        Y: =10
+                        ZIndex: =4
+
+                    Label3_5 As label:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(0, 121, 187, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.Georgia
+                        Height: =56
+                        OnSelect: =Select(Parent)
+                        Size: =40
+                        Text: =""""
+                        Width: =39
+                        X: =Label3_6.X-Self.Width
+                        Y: =10
+                        ZIndex: =5
+
+                    Icon1_2 As icon.ChevronRight:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =RGBA(184, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        DisplayMode: =DisplayMode.View
+                        Icon: =Icon.ChevronRight
+                        OnSelect: =Select(Parent)
+                        Width: =40
+                        X: =Parent.Width/2-Self.Width/2
+                        Y: =Rectangle3_4.Y+(Rectangle3_4.Height/2)-(Self.Height/2)
+                        ZIndex: =6
 
         Home_Footer_DataCard_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)

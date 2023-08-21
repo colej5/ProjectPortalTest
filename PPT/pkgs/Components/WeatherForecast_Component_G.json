@@ -83,7 +83,7 @@
         "Name": "Label5_2",
         "Parent": "WeatherForecast_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 445,
+        "PublishOrderIndex": 457,
         "Rules": [
           {
             "Category": "Data",
@@ -404,7 +404,7 @@
         "Name": "Image3_3",
         "Parent": "WeatherForecast_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 446,
+        "PublishOrderIndex": 458,
         "Rules": [
           {
             "Category": "Data",

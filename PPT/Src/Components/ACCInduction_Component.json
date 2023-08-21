@@ -26,7 +26,7 @@
             "Name": "galleryTemplate2",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 499,
+            "PublishOrderIndex": 511,
             "Rules": [
               {
                 "Category": "Design",
@@ -159,7 +159,7 @@
             "Name": "Label2",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 500,
+            "PublishOrderIndex": 512,
             "Rules": [
               {
                 "Category": "Data",
@@ -522,7 +522,7 @@
             "Name": "TutorialImage1_2",
             "Parent": "Gallery1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 501,
+            "PublishOrderIndex": 513,
             "Rules": [
               {
                 "Category": "Data",
@@ -795,7 +795,7 @@
         "Name": "Gallery1",
         "Parent": "ACCInduction_Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 498,
+        "PublishOrderIndex": 510,
         "Rules": [
           {
             "Category": "Data",
@@ -1006,7 +1006,7 @@
             "Name": "RectTextBkg1_1",
             "Parent": "Container4",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 503,
+            "PublishOrderIndex": 515,
             "Rules": [
               {
                 "Category": "Design",
@@ -1193,7 +1193,7 @@
             "Name": "TutorialImage1_1",
             "Parent": "Container4",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 504,
+            "PublishOrderIndex": 516,
             "Rules": [
               {
                 "Category": "Data",
@@ -1466,7 +1466,7 @@
         "Name": "Container4",
         "Parent": "ACCInduction_Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 502,
+        "PublishOrderIndex": 514,
         "Rules": [
           {
             "Category": "Design",
@@ -1687,7 +1687,7 @@
             "Name": "Audio1",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 506,
+            "PublishOrderIndex": 518,
             "Rules": [
               {
                 "Category": "Data",
@@ -1860,7 +1860,7 @@
             "Name": "LabelSkip1_1",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 507,
+            "PublishOrderIndex": 519,
             "Rules": [
               {
                 "Category": "Data",
@@ -2093,7 +2093,7 @@
                 "Name": "galleryTemplate1_1",
                 "Parent": "TutorialNavigator1_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 509,
+                "PublishOrderIndex": 521,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2153,7 +2153,7 @@
                 "Name": "Circle1_1",
                 "Parent": "TutorialNavigator1_1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 510,
+                "PublishOrderIndex": 522,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2337,7 +2337,7 @@
             "Name": "TutorialNavigator1_1",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 508,
+            "PublishOrderIndex": 520,
             "Rules": [
               {
                 "Category": "Data",
@@ -2585,7 +2585,7 @@
             "Name": "iconPrev1_1",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 511,
+            "PublishOrderIndex": 523,
             "Rules": [
               {
                 "Category": "Data",
@@ -2846,7 +2846,7 @@
             "Name": "iconNext1_1",
             "Parent": "Container3",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 512,
+            "PublishOrderIndex": 524,
             "Rules": [
               {
                 "Category": "Data",
@@ -3093,7 +3093,7 @@
         "Name": "Container3",
         "Parent": "ACCInduction_Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 505,
+        "PublishOrderIndex": 517,
         "Rules": [
           {
             "Category": "Design",
