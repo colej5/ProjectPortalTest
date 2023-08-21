@@ -84,7 +84,7 @@ ACC_Induction_Screen As screen:
                 ZIndex: =2
 
     Header_Component_G_1 As Header_Component_G:
-        MainHeading: ="Test Project Portal"
+        MainHeading: =varProjectName&" Project Portal"
         MenuButtonNavTo: =Home_Screen
         SubHeading: ="ACC Induction"
         Width: =App.Width

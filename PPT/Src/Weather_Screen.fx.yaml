@@ -26,9 +26,9 @@ Weather_Screen As screen:
         AcceptsFocus: =true
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderThickness: =0
-        Height: =App.Height-Weather_Header_Rectangle.Height
+        Height: =App.Height-Header_Component_G_11.Height
         Width: =Parent.Width
-        Y: =Weather_Keltbray_Logo_Image.Y+Weather_Keltbray_Logo_Image.Height+Weather_Header_Title.Height+If(App.Width<540,10,0)
+        Y: =Header_Component_G_11.Height+If(App.Width<540,10,0)
         ZIndex: =3
 
         Weather_Main_DataCard As dataCard:
@@ -37,7 +37,7 @@ Weather_Screen As screen:
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(227, 209, 210, 1)
-            Height: =If(App.Width<540,App.Height-Weather_Header_Rectangle.Height-Weather_Footer_DataCard.Height,App.Height-Weather_Header_Rectangle.Height-Weather_Footer_DataCard.Height)
+            Height: =If(App.Width<540,App.Height-Header_Component_G_11.Height-Weather_Footer_DataCard.Height,App.Height-Header_Component_G_11.Height-Weather_Footer_DataCard.Height)
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -344,99 +344,16 @@ Weather_Screen As screen:
                 Y: =8
                 ZIndex: =4
 
-    Weather_Header_Group As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
+    Header_Component_G_11 As Header_Component_G:
+        MainHeading: =varProjectName&" Project Portal"
+        MenuButtonNavTo: =Home_Screen
+        SubHeading: ="Weather Tracking"
+        Width: =App.Width
+        X: =App.Width/2-Self.Width/2
         ZIndex: =11
 
-        Weather_Header_Rectangle As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =Weather_Keltbray_Logo_Image.Y+Weather_Keltbray_Logo_Image.Height+Weather_Header_Title.Height+If(App.Width<540,10,0)
-            PressedFill: =RGBA(164, 38, 44, 1)
-            Width: =App.Width
-            ZIndex: =4
-
-        Weather_Header_Title As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Lato Black'
-            Height: =113
-            Size: =30
-            Text: |-
-                ="Test Project Portal
-                Weather Tracking"
-            Width: =App.Width
-            Y: =Weather_Keltbray_Logo_Image.Y+Weather_Keltbray_Logo_Image.Height+If(App.Width<540,10,0)
-            ZIndex: =5
-
-        Weather_Keltbray_Logo_Image As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(App.Width<540,'Keltbray-logo_single','Keltbray-logo_Black_white-box')
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =If(App.Width<540,55,223)
-            X: =62
-            Y: =16
-            ZIndex: =7
-
-        Weather_Menu_Icon As icon.Hamburger:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(116, 116, 116, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Home
-            OnSelect: =Navigate(Home_Screen,ScreenTransition.Fade);
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =39
-            X: =12
-            Y: =7
-            ZIndex: =8
-
-        Weather_Header_Divider_Rectangle As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(39, 113, 194, 1)
-            FocusedBorderThickness: =4
-            Height: =5
-            HoverFill: =RGBA(39, 113, 194, 1)
-            PressedFill: =RGBA(39, 113, 194, 1)
-            Width: =App.Width
-            Y: =Weather_Header_Rectangle.Y+Weather_Header_Rectangle.Height-Self.Height/2
-            ZIndex: =9
-
-        WeatherForecast_Component_4 As WeatherForecast_Component:
-            X: =App.Width-Self.Width-10
-            Y: =16
-            ZIndex: =10
+    WeatherForecast_Component_13 As WeatherForecast_Component:
+        X: =App.Width-Self.Width-10
+        Y: =16
+        ZIndex: =12
 

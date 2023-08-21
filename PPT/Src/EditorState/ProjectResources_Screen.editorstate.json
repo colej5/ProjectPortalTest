@@ -71,7 +71,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Header_Component_G_8",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -248,7 +248,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_ACCInduction_Button_2",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -497,7 +497,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Canvas_2",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1579,7 +1579,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_OfficeInduction_Button_2",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1881,7 +1881,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_ProjectInduction_Button_2",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2188,7 +2188,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_ProjectResources_Button_2",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2819,7 +2819,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherForecast_Component_16",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

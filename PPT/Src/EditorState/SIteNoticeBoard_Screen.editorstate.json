@@ -71,7 +71,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Header_Component_G_10",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -190,7 +190,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Canvas_4",
-      "ParentIndex": 0,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1139,7 +1139,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Header_Rectangle_4",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1343,7 +1343,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Header_Title_4",
-      "ParentIndex": 2,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1615,7 +1615,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Keltbray_Logo_Image_4",
-      "ParentIndex": 7,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1919,7 +1919,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Home_Menu_Icon_4",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2498,7 +2498,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherForecast_Component_19",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2593,7 +2593,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherForecast_Component_20",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

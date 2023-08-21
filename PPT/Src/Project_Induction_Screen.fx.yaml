@@ -885,7 +885,7 @@ Project_Induction_Screen As screen:
                 ZIndex: =3
 
     Header_Component_G_4 As Header_Component_G:
-        MainHeading: ="Test Project Portal"
+        MainHeading: =varProjectName&" Project Portal"
         MenuButtonNavTo: =Home_Screen
         SubHeading: ="Project Induction"
         Width: =App.Width

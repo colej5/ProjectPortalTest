@@ -80,7 +80,7 @@
         "Name": "Image3_2",
         "Parent": "WeatherImage_Component",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 509,
+        "PublishOrderIndex": 506,
         "Rules": [
           {
             "Category": "Data",

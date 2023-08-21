@@ -62,7 +62,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ACC_Access_Canvas",
-      "ParentIndex": 0,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1011,7 +1011,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ACC_Access_Header_Rectangle",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1215,7 +1215,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ACC_Access_Header_Title",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1487,7 +1487,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ACC_Access_Keltbray_Logo_Image",
-      "ParentIndex": 6,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1806,7 +1806,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ACC_Access_Menu_Icon",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2393,7 +2393,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "Header_Component_G_2",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2692,7 +2692,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "WeatherForecast_Component_2",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

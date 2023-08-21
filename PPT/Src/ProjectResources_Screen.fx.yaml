@@ -301,7 +301,7 @@ ProjectResources_Screen As screen:
                 ZIndex: =2
 
     Header_Component_G_8 As Header_Component_G:
-        MainHeading: ="Test Project Portal"
+        MainHeading: =varProjectName&" Project Portal"
         MenuButtonNavTo: =Home_Screen
         SubHeading: ="Project Resources"
         Width: =App.Width

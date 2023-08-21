@@ -107,7 +107,7 @@ ACC_Access_Screen As screen:
                 ZIndex: =2
 
     Header_Component_G_2 As Header_Component_G:
-        MainHeading: ="Test Project Portal"
+        MainHeading: =varProjectName&" Project Portal"
         MenuButtonNavTo: =Home_Screen
         SubHeading: ="ACC Access Request"
         Width: =App.Width

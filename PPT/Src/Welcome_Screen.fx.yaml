@@ -2,7 +2,8 @@ Welcome_Screen As screen:
     Fill: =RGBA(227, 209, 210, 1)
     LoadingSpinnerColor: =RGBA(164, 38, 44, 1)
     OnVisible: |+
-        =
+        =// Variables
+        Set(varProjectName,ProjectName_Input_Label.Text);
         
         //Collections
         
@@ -33,14 +34,14 @@ Welcome_Screen As screen:
             YSWD_Container As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =559
+                Height: =498
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
                 Width: =1000
-                X: =175
-                Y: =15
+                X: =Parent.Width/2-Self.Width/2
+                Y: =150
                 ZIndex: =1
 
                 Rectangle2_2 As rectangle:
@@ -55,10 +56,10 @@ Welcome_Screen As screen:
                     BorderColor: =RGBA(0, 18, 107, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    Height: =52
+                    Height: =55
                     Image: ='Keltbray-logo_Black_white-box'
-                    Width: =292
-                    X: =45
+                    Width: =247
+                    X: =31
                     Y: =20
                     ZIndex: =3
 
@@ -173,6 +174,51 @@ Welcome_Screen As screen:
                         X: =Parent.Width/2-Self.Width/2
                         Y: =Rectangle3_4.Y+(Rectangle3_4.Height/2)-(Self.Height/2)
                         ZIndex: =6
+
+            Label10 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =57
+                Size: =18
+                Text: ="Welcome to the "&varProjectName&" project portal, this is where you can request access to systems, complete inductions and much more. "
+                Width: =1000
+                X: =Parent.Width/2-Self.Width/2
+                Y: =22
+                ZIndex: =2
+
+            Button2 As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(164, 38, 44, 1)
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(164, 38, 44, 1), -10%)
+                OnSelect: =Navigate(Home_Screen,ScreenTransition.Fade);
+                PressedBorderColor: =ColorFade(RGBA(164, 38, 44, 1), -50%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =ColorFade(RGBA(164, 38, 44, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                Text: ="Clcik here to enter portal"
+                Width: =300
+                X: =Parent.Width/2-Self.Width/2
+                Y: =Label10.Y+Label10.Height+10
+                ZIndex: =3
 
         Home_Footer_DataCard_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
