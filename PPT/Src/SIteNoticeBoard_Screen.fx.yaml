@@ -35,15 +35,15 @@ SIteNoticeBoard_Screen As screen:
             Gallery6 As gallery.galleryVertical:
                 BorderColor: =RGBA(166, 166, 166, 1)
                 DelayItemLoading: =true
+                Height: =(Self.TemplateHeight+Self.TemplatePadding)*(CountRows(Self.AllItems)/3)
                 Items: ='Site Notice Board'
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: =Launch(ThisItem.'Link to item');
                 TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-                Width: |+
-                    =Parent.Width
-                    
-                WrapCount: =3
+                Width: |
+                    =If(App.Width > 540, App.Width,Parent.Width)
+                WrapCount: =If(App.Width<540,1,3)
                 Y: =35
                 ZIndex: =3
 
@@ -62,10 +62,11 @@ SIteNoticeBoard_Screen As screen:
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedFill: =RGBA(0, 0, 0, 0)
-                    RadiusBottomLeft: =8
-                    RadiusBottomRight: =8
-                    RadiusTopLeft: =8
-                    RadiusTopRight: =8
+                    RadiusBottomLeft: =90
+                    RadiusBottomRight: =90
+                    RadiusTopLeft: =90
+                    RadiusTopRight: =90
+                    Tooltip: ="Updated by "&ThisItem.'Modified By'.DisplayName
                     Width: =64
                     X: =30
                     ZIndex: =2
