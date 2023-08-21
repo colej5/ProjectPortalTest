@@ -26,6 +26,20 @@
     "dependents": [],
     "id": "5993957e-f88f-4cc6-bbec-83b9b0de7789"
   },
+  "8effb3a8-634c-46d5-b538-e7f1e6adfca8": {
+    "connectionRef": {
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1649/1.0.1649.3368/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "8effb3a8-634c-46d5-b538-e7f1e6adfca8"
+  },
   "c8dd38e3-3304-4f0b-8beb-aed330953abe": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -61,6 +75,9 @@
           "CDE Roles and folder permissions": {
             "tableName": "bda18a1f-746c-44f0-84b3-df3c2d6931ab"
           },
+          "Site Notice Board": {
+            "tableName": "4106850d-f951-4f47-bbe6-965f4ef59d49"
+          },
           "Site Team Roles and Responsibilities": {
             "tableName": "66584208-14d1-4587-8cbb-9efc63523d7a"
           },
@@ -82,7 +99,8 @@
       "ACC Access",
       "Site Team Roles and Responsibilities",
       "CDE Roles and folder permissions",
-      "YSWD List"
+      "YSWD List",
+      "Site Notice Board"
     ],
     "dependencies": {},
     "dependents": [],

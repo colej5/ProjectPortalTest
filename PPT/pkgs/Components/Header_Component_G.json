@@ -74,7 +74,7 @@
         "Name": "Menu_Icon",
         "Parent": "Header_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 443,
+        "PublishOrderIndex": 448,
         "Rules": [
           {
             "Category": "Design",
@@ -305,7 +305,7 @@
         "Name": "Weather_Keltbray_Logo_Image_1",
         "Parent": "Header_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 444,
+        "PublishOrderIndex": 449,
         "Rules": [
           {
             "Category": "Data",
@@ -626,7 +626,7 @@
         "Name": "Weather_Header_Title_1",
         "Parent": "Header_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 445,
+        "PublishOrderIndex": 450,
         "Rules": [
           {
             "Category": "Data",
@@ -941,7 +941,7 @@
         "Name": "HtmlText1",
         "Parent": "Header_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 446,
+        "PublishOrderIndex": 451,
         "Rules": [
           {
             "Category": "Data",
@@ -1159,7 +1159,7 @@
         "Name": "ACC_Induction_Header_Rectangle",
         "Parent": "Header_Component_G",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 447,
+        "PublishOrderIndex": 452,
         "Rules": [
           {
             "Category": "Design",
