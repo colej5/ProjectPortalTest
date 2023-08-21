@@ -10080,19 +10080,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.Gallery6.AccessibleLabel"
+                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.SNB_Gallery.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.Gallery6.AccessibleLabel",
+                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.SNB_Gallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "SIteNoticeBoard_Screen",
-                "type": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.Gallery6"
+                "type": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.SNB_Gallery"
               }
             }
           ],
@@ -10110,19 +10110,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.Gallery6.TabIndex"
+                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.SNB_Gallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.Gallery6.TabIndex",
+                  "fullyQualifiedName": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.SNB_Gallery.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "SIteNoticeBoard_Screen",
-                "type": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.Gallery6"
+                "type": "SIteNoticeBoard_Screen.Home_Canvas_4.Home_Main_DataCard_4.SNB_Gallery"
               }
             }
           ],
