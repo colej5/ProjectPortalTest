@@ -6690,54 +6690,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 13
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 13
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 13
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 13
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -6868,12 +6820,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "HomeButtonMenu_9Grid_Component_2.Home_SubmitRequest_Container_10.Button1_11.OnSelect"
+                  "fullyQualifiedName": "HomeButtonMenu_9Grid_Component_Local.Home_SubmitRequest_Container_10.Button1_11.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "HomeButtonMenu_9Grid_Component_2.Home_SubmitRequest_Container_10.Button1_11.OnSelect",
+                  "fullyQualifiedName": "HomeButtonMenu_9Grid_Component_Local.Home_SubmitRequest_Container_10.Button1_11.OnSelect",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -6886,8 +6838,8 @@
               },
               "properties": {
                 "member": "OnSelect",
-                "module": "HomeButtonMenu_9Grid_Component_2",
-                "type": "HomeButtonMenu_9Grid_Component_2.Home_SubmitRequest_Container_10.Button1_11"
+                "module": "HomeButtonMenu_9Grid_Component_Local",
+                "type": "HomeButtonMenu_9Grid_Component_Local.Home_SubmitRequest_Container_10.Button1_11"
               }
             }
           ],
@@ -7302,6 +7254,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Role_ComboBox_1.SearchItems"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Role_ComboBox_1.SearchItems",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 78,
+                  "snippet": {
+                    "text": "\"{Name}\""
+                  }
+                }
+              },
+              "properties": {
+                "member": "SearchItems",
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_Role_ComboBox_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Search"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "WeatherForecast_Component.Label5_1.TabIndex"
                 }
               ],
@@ -7452,36 +7444,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Internal_ACC_Access_Component.Internal_SubMarket_Dropdown.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Internal_ACC_Access_Component.Internal_SubMarket_Dropdown.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Internal_ACC_Access_Component",
-                "type": "Internal_ACC_Access_Component.Internal_SubMarket_Dropdown"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Internal_ACC_Access_Component.Internal_TaskTeam_Dropdown.AccessibleLabel"
                 }
               ],
@@ -7542,19 +7504,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Internal_ACC_Access_Component.Internal_OCRA_ListBox.AccessibleLabel"
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Sector_Dropdown_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Internal_ACC_Access_Component.Internal_OCRA_ListBox.AccessibleLabel",
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Sector_Dropdown_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Internal_ACC_Access_Component",
-                "type": "Internal_ACC_Access_Component.Internal_OCRA_ListBox"
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_Sector_Dropdown_1"
               }
             }
           ],
@@ -8111,19 +8073,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ACC_Access_Screen.ACC_Access_Menu_Icon.AccessibleLabel"
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_SubMarket_Dropdown_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ACC_Access_Screen.ACC_Access_Menu_Icon.AccessibleLabel",
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_SubMarket_Dropdown_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "ACC_Access_Screen",
-                "type": "ACC_Access_Screen.ACC_Access_Menu_Icon"
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_SubMarket_Dropdown_1"
               }
             }
           ],
@@ -8141,19 +8103,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ACC_Access_Screen.ACC_Access_Menu_Icon.TabIndex"
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Market_Dropdown_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ACC_Access_Screen.ACC_Access_Menu_Icon.TabIndex",
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Market_Dropdown_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
-                "module": "ACC_Access_Screen",
-                "type": "ACC_Access_Screen.ACC_Access_Menu_Icon"
+                "member": "AccessibleLabel",
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_Market_Dropdown_1"
               }
             }
           ],
@@ -8163,8 +8125,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -8184,6 +8146,66 @@
                 "member": "AccessibleLabel",
                 "module": "Project_Induction_Screen",
                 "type": "Project_Induction_Screen.Project_Induction_Canvas.Project_Induction_Main_DataCard.Container6.TabList2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Role_ComboBox_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_Role_ComboBox_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_Role_ComboBox_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_TaskTeam_Dropdown_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_TaskTeam_Dropdown_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_TaskTeam_Dropdown_1"
               }
             }
           ],
@@ -9991,6 +10013,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_OCRA_ListBox_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Internal_ACC_Access_OCRA_Component.Internal_OCRA_ListBox_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Internal_ACC_Access_OCRA_Component",
+                "type": "Internal_ACC_Access_OCRA_Component.Internal_OCRA_ListBox_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [

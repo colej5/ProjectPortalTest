@@ -25,7 +25,7 @@ ACC_Access_Screen As screen:
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(227, 209, 210, 1)
-            Height: =If(App.Width<540,Internal_ACC_Access_Component_1.Y+Internal_ACC_Access_Component_1.Height+50,App.Height-ACC_Access_Header_Rectangle.Height-ACC_Access_Footer_DataCard.Height)
+            Height: =If(App.Width<540,Internal_ACC_Access_Component_1.Y+Internal_ACC_Access_Component_1.Height+50,App.Height-Header_Component_G_2.Height-ACC_Access_Footer_DataCard.Height)
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -52,7 +52,7 @@ ACC_Access_Screen As screen:
 
             Internal_ACC_Access_Component_1 As Internal_ACC_Access_Component:
                 Height: |-
-                    =If(App.Width<540,App.Height-Header_Component_G_2.Height-ACC_Access_Footer_DataCard.Height,800
+                    =If(App.Width<540,App.Height-Header_Component_G_2.Height-ACC_Access_Footer_DataCard.Height,550
                     )
                 Market: =
                 Sector: =
@@ -113,102 +113,6 @@ ACC_Access_Screen As screen:
         Width: =App.Width
         X: =App.Width/2-Self.Width/2
         ZIndex: =11
-
-    ACC_Access_Header_Group As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =11
-
-        ACC_Access_Header_Rectangle As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =ACC_Access_Keltbray_Logo_Image.Y+ACC_Access_Keltbray_Logo_Image.Height+ACC_Access_Header_Title.Height+If(App.Width<540,10,0)
-            PressedFill: =RGBA(164, 38, 44, 1)
-            Visible: =false
-            Width: =App.Width
-            ZIndex: =4
-
-        ACC_Access_Header_Title As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Lato Black'
-            Height: =113
-            Size: =30
-            Text: |-
-                ="Test Project Portal
-                ACC Induction"
-            Visible: =false
-            Width: =App.Width
-            Y: =ACC_Access_Keltbray_Logo_Image.Y+ACC_Access_Keltbray_Logo_Image.Height+If(App.Width<540,10,0)
-            ZIndex: =5
-
-        ACC_Access_Keltbray_Logo_Image As image:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =55
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Image: =If(App.Width<540,'Keltbray-logo_single','Keltbray-logo_Black_white-box')
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =false
-            Width: =If(App.Width<540,55,223)
-            X: =62
-            Y: =16
-            ZIndex: =7
-
-        ACC_Access_Menu_Icon As icon.Hamburger:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(116, 116, 116, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Home
-            OnSelect: =Navigate(Home_Screen,ScreenTransition.Fade);
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(164, 38, 44, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =false
-            Width: =39
-            X: =12
-            Y: =7
-            ZIndex: =8
-
-        ACC_Access_Header_Divider_Rectangle As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(39, 113, 194, 1)
-            FocusedBorderThickness: =4
-            Height: =5
-            HoverFill: =RGBA(39, 113, 194, 1)
-            PressedFill: =RGBA(39, 113, 194, 1)
-            Visible: =false
-            Width: =App.Width
-            Y: =ACC_Access_Header_Rectangle.Y+ACC_Access_Header_Rectangle.Height-Self.Height/2
-            ZIndex: =9
 
     WeatherForecast_Component_2 As WeatherForecast_Component:
         X: =App.Width-Self.Width-10

@@ -138,12 +138,18 @@
             "Name": "Button1_11",
             "Parent": "Home_SubmitRequest_Container_10",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 523,
+            "PublishOrderIndex": 506,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button1_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button1_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,1).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -210,12 +216,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,1).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -472,9 +472,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_10",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 522,
+        "PublishOrderIndex": 505,
         "Rules": [
           {
             "Category": "Design",
@@ -490,20 +490,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2-110,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2-225\r\n))))",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2-110,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2-225\r\n))))",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2",
-            "Property": "Y",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
@@ -598,8 +598,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Width",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2",
+            "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
@@ -759,12 +759,18 @@
             "Name": "Button1_12",
             "Parent": "Home_SubmitRequest_Container_11",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 525,
+            "PublishOrderIndex": 508,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button2_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button2_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,2).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -831,12 +837,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,2).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -973,7 +973,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button2_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button2_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1101,9 +1101,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_11",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 524,
+        "PublishOrderIndex": 507,
         "Rules": [
           {
             "Category": "Design",
@@ -1119,20 +1119,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2+110,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2\r\n))))",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*1,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2)",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*1,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2)",
             "Property": "Y",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1, false,true)",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -1227,7 +1227,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -1239,8 +1239,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1, false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2+110,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1394,12 +1394,18 @@
             "Name": "Button1_13",
             "Parent": "Home_SubmitRequest_Container_12",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 527,
+            "PublishOrderIndex": 510,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button3_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button3_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,3).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1466,12 +1472,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,3).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -1608,7 +1608,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button3_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button3_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -1736,9 +1736,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_12",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 526,
+        "PublishOrderIndex": 509,
         "Rules": [
           {
             "Category": "Design",
@@ -1754,20 +1754,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2+225\r\n))))",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*2,\r\nHomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2)",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*2,\r\nHomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2)",
             "Property": "Y",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(Or(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2), false,true)",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -1862,7 +1862,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -1874,8 +1874,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Or(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2), false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2+225\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -2029,12 +2029,18 @@
             "Name": "Button1_14",
             "Parent": "Home_SubmitRequest_Container_13",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 529,
+            "PublishOrderIndex": 512,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button4_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button4_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,4).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -2101,12 +2107,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,4).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -2371,9 +2371,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_13",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 528,
+        "PublishOrderIndex": 511,
         "Rules": [
           {
             "Category": "Design",
@@ -2401,7 +2401,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -2479,8 +2479,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*3,\r\nHomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)",
+            "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
@@ -2497,20 +2497,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*3,\r\nHomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component_2.ButtonSize-50)",
-            "Property": "Y",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 5, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2-110,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 6, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2-225\r\n))))",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(Or(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2,HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 3), false,true)",
+            "InvariantScript": "If(Or(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 3), false,true)",
             "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 5, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2-110,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 6, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2-225\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -2664,12 +2664,18 @@
             "Name": "Button1_15",
             "Parent": "Home_SubmitRequest_Container_14",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 531,
+            "PublishOrderIndex": 514,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button5_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button5_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,5).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -2736,12 +2742,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,5).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -2878,7 +2878,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button5_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button5_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -3006,9 +3006,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_14",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 530,
+        "PublishOrderIndex": 513,
         "Rules": [
           {
             "Category": "Design",
@@ -3024,20 +3024,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 5, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2+110,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 6, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2\r\n))))",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*4,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component_2.ButtonSize-50)",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*4,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)",
             "Property": "Y",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(Or(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 3,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4), false,true)",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -3132,7 +3132,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -3144,8 +3144,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Or(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2,HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 3,HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4), false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 5, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2+110,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 6, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -3299,12 +3299,18 @@
             "Name": "Button1_16",
             "Parent": "Home_SubmitRequest_Container_15",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 533,
+            "PublishOrderIndex": 516,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button6_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button6_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,6).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -3371,12 +3377,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,6).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -3513,7 +3513,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button6_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button6_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -3641,14 +3641,14 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_15",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 532,
+        "PublishOrderIndex": 515,
         "Rules": [
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*5,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)",
+            "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
@@ -3737,8 +3737,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 5\r\n    )\r\n    , false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2+225\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
@@ -3755,20 +3755,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*5,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+HomeButtonMenu_9Grid_Component_2.ButtonSize-50)",
-            "Property": "Y",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 3, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2+225\r\n))))",
-            "Property": "X",
+            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 5\r\n    )\r\n    , false,true)",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           },
           {
@@ -3934,12 +3934,18 @@
             "Name": "Button1_19",
             "Parent": "Home_SubmitRequest_Container_18",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 535,
+            "PublishOrderIndex": 518,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button9_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button9_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,9).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -4006,12 +4012,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,9).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -4148,7 +4148,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button9_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button9_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -4276,14 +4276,14 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_18",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 534,
+        "PublishOrderIndex": 517,
         "Rules": [
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*8,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*2)",
+            "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
@@ -4372,8 +4372,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 5,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 6,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 7,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 8\r\n    )\r\n    , false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2+225\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
@@ -4390,20 +4390,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*8,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*2)",
-            "Property": "Y",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2+225\r\n))))",
-            "Property": "X",
+            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 5,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 6,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 7,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 8\r\n    )\r\n    , false,true)",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           },
           {
@@ -4569,12 +4569,18 @@
             "Name": "Button1_18",
             "Parent": "Home_SubmitRequest_Container_17",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 537,
+            "PublishOrderIndex": 520,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button8_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button8_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,8).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -4641,12 +4647,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,8).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -4783,7 +4783,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button8_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button8_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -4911,9 +4911,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_17",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 536,
+        "PublishOrderIndex": 519,
         "Rules": [
           {
             "Category": "Design",
@@ -4929,20 +4929,20 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2+110,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2\r\n))))",
-            "Property": "X",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*7,\r\nHomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*2)",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*7,\r\nHomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*2)",
             "Property": "Y",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 5,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 6,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 7\r\n    )\r\n    , false,true)",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -5037,7 +5037,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -5049,8 +5049,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 5,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 6,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 7\r\n    )\r\n    , false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2+110,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -5204,12 +5204,18 @@
             "Name": "Button1_17",
             "Parent": "Home_SubmitRequest_Container_16",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 539,
+            "PublishOrderIndex": 522,
             "Rules": [
               {
                 "Category": "Data",
-                "InvariantScript": "HomeButtonMenu_9Grid_Component_2.Button7_Text",
+                "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.Button7_Text",
                 "Property": "Text",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_Local.ItemColourSet,7).background)",
+                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -5276,12 +5282,6 @@
                 "Category": "Design",
                 "InvariantScript": "DisplayMode.Edit",
                 "Property": "DisplayMode",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Category": "Design",
-                "InvariantScript": "ColorValue(Index(HomeButtonMenu_9Grid_Component_2.ItemColourSet,7).background)",
-                "Property": "Fill",
                 "RuleProviderType": "Unknown"
               },
               {
@@ -5418,7 +5418,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_2.Button7_Screen,ScreenTransition.Fade);",
+                "InvariantScript": "Navigate(HomeButtonMenu_9Grid_Component_Local.Button7_Screen,ScreenTransition.Fade);",
                 "Property": "OnSelect",
                 "RuleProviderType": "Unknown"
               }
@@ -5546,9 +5546,9 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Home_SubmitRequest_Container_16",
-        "Parent": "HomeButtonMenu_9Grid_Component_2",
+        "Parent": "HomeButtonMenu_9Grid_Component_Local",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 538,
+        "PublishOrderIndex": 521,
         "Rules": [
           {
             "Category": "Design",
@@ -5558,8 +5558,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
-            "Property": "Height",
+            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*6,HomeButtonMenu_9Grid_Component_Local.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_Local.ButtonSize-50)*2)",
+            "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
@@ -5636,7 +5636,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "HomeButtonMenu_9Grid_Component_2.ButtonSize-HomeButtonMenu_9Grid_Component_2.ButtonSize*0.3",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -5666,8 +5666,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(App.Width<540,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*6,HomeButtonMenu_9Grid_Component_2.ButtonSize/2-Self.Height/2+(HomeButtonMenu_9Grid_Component_2.ButtonSize-50)*2)",
-            "Property": "Y",
+            "InvariantScript": "HomeButtonMenu_9Grid_Component_Local.ButtonSize-HomeButtonMenu_9Grid_Component_Local.ButtonSize*0.3",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -5678,14 +5678,14 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 5,\r\n    HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 6\r\n    )\r\n    , false,true)",
-            "Property": "Visible",
+            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_Local.Width<540,HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2-110,\r\nIf(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component_Local.Width/2-Self.Width/2-225\r\n))))",
+            "Property": "X",
             "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(HomeButtonMenu_9Grid_Component_2.Width<540,HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 7, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons = 8, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2-110,\r\nIf(HomeButtonMenu_9Grid_Component_2.NumberOfButtons >= 9, HomeButtonMenu_9Grid_Component_2.Width/2-Self.Width/2-225\r\n))))",
-            "Property": "X",
+            "InvariantScript": "If(Or(\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 1,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 2,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 3,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 4,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 5,\r\n    HomeButtonMenu_9Grid_Component_Local.NumberOfButtons = 6\r\n    )\r\n    , false,true)",
+            "Property": "Visible",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -5835,121 +5835,25 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638282192684367287",
-    "Name": "HomeButtonMenu_9Grid_Component_2",
+    "LastModifiedTimestamp": "638282226674639671",
+    "Name": "HomeButtonMenu_9Grid_Component_Local",
     "Rules": [
       {
         "Category": "Data",
-        "InvariantScript": "100",
-        "Property": "NoButtonRows",
+        "InvariantScript": "\r\nTable(\r\n    {background:\"#2771c2\"},{background:\"#db1614\"},{background:\"#008b3e\"},\r\n    {background:\"#2771c2\"},{background:\"#db1614\"},{background:\"#008b3e\"},\r\n    {background:\"#2771c2\"},{background:\"#db1614\"},{background:\"#008b3e\"}\r\n    )",
+        "Property": "ItemColourSet",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
-        "InvariantScript": "100",
-        "Property": "NoButtonCols",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "275",
-        "Property": "ButtonSize",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 1\"",
-        "Property": "Button1_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 2\"",
-        "Property": "Button2_Text",
+        "InvariantScript": "5",
+        "Property": "NumberOfButtons",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
         "InvariantScript": "App.ActiveScreen",
-        "Property": "Button1_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button2_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 3\"",
-        "Property": "Button3_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button3_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 4\"",
-        "Property": "Button4_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button4_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 5\"",
-        "Property": "Button5_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button5_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 6\"",
-        "Property": "Button6_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button6_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 7\"",
-        "Property": "Button7_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button7_Screen",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "\"Button 8\"",
-        "Property": "Button8_Text",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "Button8_Screen",
+        "Property": "Button9_Screen",
         "RuleProviderType": "System"
       },
       {
@@ -5961,19 +5865,133 @@
       {
         "Category": "Data",
         "InvariantScript": "App.ActiveScreen",
-        "Property": "Button9_Screen",
+        "Property": "Button8_Screen",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
-        "InvariantScript": "5",
-        "Property": "NumberOfButtons",
+        "InvariantScript": "\"Button 8\"",
+        "Property": "Button8_Text",
         "RuleProviderType": "System"
       },
       {
         "Category": "Data",
-        "InvariantScript": "\r\nTable(\r\n    {background:\"#2771c2\"},{background:\"#db1614\"},{background:\"#008b3e\"},\r\n    {background:\"#2771c2\"},{background:\"#db1614\"},{background:\"#008b3e\"},\r\n    {background:\"#2771c2\"},{background:\"#db1614\"},{background:\"#008b3e\"}\r\n    )",
-        "Property": "ItemColourSet",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button7_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 7\"",
+        "Property": "Button7_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button6_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 6\"",
+        "Property": "Button6_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button5_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 5\"",
+        "Property": "Button5_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button4_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 4\"",
+        "Property": "Button4_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button3_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 3\"",
+        "Property": "Button3_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button2_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "Button1_Screen",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 2\"",
+        "Property": "Button2_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "\"Button 1\"",
+        "Property": "Button1_Text",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "275",
+        "Property": "ButtonSize",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "100",
+        "Property": "NoButtonCols",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Data",
+        "InvariantScript": "100",
+        "Property": "NoButtonRows",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "900",
+        "Property": "Width",
         "RuleProviderType": "System"
       },
       {
@@ -5984,33 +6002,15 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "If(\r\n    App.Width<540,\r\n        Switch(HomeButtonMenu_9Grid_Component_2.NumberOfButtons,\r\n            1,275,\r\n            2,500,\r\n            3,725,\r\n            4,950,\r\n            5,1175,\r\n            6,1400,\r\n            7,1625,\r\n            8,1850,\r\n            9,2075\r\n        ),\r\nIf(\r\n    Or(HomeButtonMenu_9Grid_Component_2.NumberOfButtons=1,HomeButtonMenu_9Grid_Component_2.NumberOfButtons=2,HomeButtonMenu_9Grid_Component_2.NumberOfButtons=3),\r\n        275,\r\n    If(\r\n    Or(HomeButtonMenu_9Grid_Component_2.NumberOfButtons=4,HomeButtonMenu_9Grid_Component_2.NumberOfButtons=5,HomeButtonMenu_9Grid_Component_2.NumberOfButtons=6),\r\n        500,\r\n        If(\r\n    Or(HomeButtonMenu_9Grid_Component_2.NumberOfButtons=7,HomeButtonMenu_9Grid_Component_2.NumberOfButtons=8,HomeButtonMenu_9Grid_Component_2.NumberOfButtons=9),\r\n        725))))",
-        "Property": "Height",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "900",
-        "Property": "Width",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "If(\r\n    App.Width<540,\r\n        Switch(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons,\r\n            1,275,\r\n            2,500,\r\n            3,725,\r\n            4,950,\r\n            5,1175,\r\n            6,1400,\r\n            7,1625,\r\n            8,1850,\r\n            9,2075\r\n        ),\r\nIf(\r\n    Or(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=1,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=2,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=3),\r\n        275,\r\n    If(\r\n    Or(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=4,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=5,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=6),\r\n        500,\r\n        If(\r\n    Or(HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=7,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=8,HomeButtonMenu_9Grid_Component_Local.NumberOfButtons=9),\r\n        725))))",
+        "Property": "Height",
+        "RuleProviderType": "System"
       }
     ]
   },
@@ -6018,7 +6018,7 @@
     "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "HomeButtonMenu_9Grid_Component_2",
+    "Name": "HomeButtonMenu_9Grid_Component_Local",
     "TemplateGuid": "e7db3f534edf465d949a3487ed984246"
   },
   "ComponentType": "CanvasComponent",
@@ -6240,7 +6240,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638282192684367287",
+  "LastModifiedTimestamp": "638282226674639671",
   "Name": "e7db3f534edf465d949a3487ed984246",
   "OverridableProperties": {},
   "TemplateOriginalName": "1e6d6e92ccfb4b72938ec347c663631e",

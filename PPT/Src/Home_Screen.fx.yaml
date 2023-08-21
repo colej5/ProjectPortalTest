@@ -255,11 +255,11 @@ Home_Screen As screen:
                     Y: =If(App.Width<540,25,25)
                     ZIndex: =4
 
-            HomeButtonMenu_9Grid_Component_3 As HomeButtonMenu_9Grid_Component_2:
+            HomeButtonMenu_9Grid_Component_3 As HomeButtonMenu_9Grid_Component_Local:
                 Button1_Text: =If(IsBlank(LookUp('ACC Access',Lower(User().Email) in Lower(Email))),"Request CDE Access","Complete CDE Induction")
-                Button2_Screen: =Project_Induction_Screen
+                Button2_Screen: =Inductions_Screen
                 Button2_Text: ="Inductions"
-                Button3_Screen: =Office_Induction_Screen
+                Button3_Screen: =SIteNoticeBoard_Screen
                 Button3_Text: ="Site Notice Board"
                 Button4_Text: ="Project Resources"
                 Button5_Screen: =RoleAndResponsibilities_Screen
